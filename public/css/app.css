@@ -17,12 +17,49 @@
 }
 .header div{
     display: flex;
+    align-items: center;
 }
-.iconos img{
-    width: 30px;
-    height: 30px;
+h1{
+    margin-left: 10px;
 }
-.header img:first-child{
-    width: 60px;
-    height: 60px;
+.iconos{
+    width: 40px;
+    height: 40px;
+    padding: 0px 10px 0px 10px;
+}
+form {
+    background-color: white;
+    width: 272px;
+    height: 44px;
+    border-radius: 50px;
+    border: black 2px solid;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+input {
+    all: unset;
+    font: 16px system-ui;
+    color: black;
+    height: 100%;
+    width: 100%;
+    padding: 6px 10px;
+}
+::placeholder {
+    color: black;
+    opacity: 0.7;
+}
+button {
+    all: unset;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+}
+
+svg {
+    color: black;
+    fill: currentColor;
+    width: 24px;
+    height: 24px;
+    padding: 10px;
 }
