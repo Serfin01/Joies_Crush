@@ -1,0 +1,28 @@
+*{
+    margin: 0 ;
+    border: border-box;
+}
+:root{
+    --secundario3: #BBF2DD;
+}
+.preHeader{
+    background-color: var(--secundario3);
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+.header div{
+    display: flex;
+}
+.iconos img{
+    width: 30px;
+    height: 30px;
+}
+.header img:first-child{
+    width: 60px;
+    height: 60px;
+}
