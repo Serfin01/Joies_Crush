@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <title>Joies Crush</title>
 </head>
@@ -34,6 +40,29 @@
                 <img class="iconos" src="{{ asset('img/icons/shopping-bag 1.png') }}" alt="icono tienda">
                 {{-- <img class="iconos" src="{{ asset('img/icons/idioma 1.png') }}" alt="icono idioma"> --}}
             </div>
+        </div>
+    </div>
+    <div class="nav">
+        <a href="#">Coleccions</a>
+        <a href="#">Arrecades</a>
+        <a href="#">Galeria d’estils</a>
+        <a href="#">Sobre nosaltres</a>
+        <a href="#">Contacte</a>
+    </div>
+    <div class="heroSection">
+
+    </div>
+    <div class="intro">
+        <div>
+            <h2>ESTÁS BUSCANT LA TEVA <i>CRUSH</i>?</h2>
+            <p>Busquem la joia que més et defineixi, la que més t'enamori.</p>
+            <p>Amb argila polimèrica dissenyem la teva arracada única i especial.
+                Al igual que les les teves històries d’amor, mai trobaràs una crush igual.</p>
+            <a href="">Anar al catàleg</a>
+        </div>
+        <div>
+            <img src="" alt="pendiente">
+            <img src="" alt="pendiente">
         </div>
     </div>
     <script src="{{ asset('js/app.js') }}"></script>
