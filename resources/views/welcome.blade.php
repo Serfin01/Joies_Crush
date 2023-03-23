@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&display=swap" rel="stylesheet">
@@ -12,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <title>Joies Crush</title>
 </head>
 <body>
@@ -50,7 +52,16 @@
         <a href="#">Contacte</a>
     </div>
     <div class="heroSection">
-
+        <div class="bxslider">
+            <div><img src="{{ asset('img/carrusel/carrusel1.JPG') }}" alt="pendiente morado"></div>
+            <div><img id="slide3" src="{{ asset('img/carrusel/carrusel3.jpg') }}" alt="mujer con pendiente"></div>
+            <div><img id="slide5" src="{{ asset('img/carrusel/carrusel5.JPG') }}" alt="pendiente rojo"></div>
+            <div class="bx-pager">
+                <a data-slide-index="0" href="" class="pagerDot">•</a>
+                <a data-slide-index="1" href="" class="pagerDot">•</a>
+                <a data-slide-index="2" href="" class="pagerDot">•</a>
+            </div>
+        </div>
     </div>
     <div class="intro">
         <div>
@@ -63,6 +74,84 @@
         <div>
             <img src="" alt="pendiente">
             <img src="" alt="pendiente">
+        </div>
+    </div>
+    <div class="novedades">
+        <div class="novTitle">
+            <h2>NOVETATS</h2>
+        </div>
+        <div class="genero">
+            <div class="item">
+                <div class="fotoImpostor"></div>
+                <p>17,50€</p>
+                <div class="itemC">
+                    <a href="#" class="btnCarrito">Afegir al carret</a>
+                    <a href="#"><img class="favs" src="{{ asset('img/icons/corazon.png') }}" alt="icono favoritos"></a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="fotoImpostor"></div>
+                <p>17,50€</p>
+                <div class="itemC">
+                    <a href="#" class="btnCarrito">Afegir al carret</a>
+                    <a href="#"><img class="favs" src="{{ asset('img/icons/corazon.png') }}" alt="icono favoritos"></a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="fotoImpostor"></div>
+                <p>17,50€</p>
+                <div class="itemC">
+                    <a href="#" class="btnCarrito">Afegir al carret</a>
+                    <a href="#"><img class="favs" src="{{ asset('img/icons/corazon.png') }}" alt="icono favoritos"></a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="fotoImpostor"></div>
+                <p>17,50€</p>
+                <div class="itemC">
+                    <a href="#" class="btnCarrito">Afegir al carret</a>
+                    <a href="#"><img class="favs" src="{{ asset('img/icons/corazon.png') }}" alt="icono favoritos"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div>
+                <h4>SOBRE JOIES CRUSH</h4>
+                <p>Coleccions</p>
+                <p>Catàleg d’arrecades</p>
+                <p>Galería d’estils</p>
+                <p>Sobre nosaltres</p>
+                <p>Contacte</p>
+            </div>
+            <div>
+                <h4>LEGAL</h4>
+                <p>Condicions generals</p>
+                <p>Pol·lítica de privacitat</p>
+                <p>Pol·lítica de cookies</p>
+            </div>
+            <div>
+                <h4>AJUDA</h4>
+                <p>Métodes de pagament</p>
+                <p>Termes de servei</p>
+                <p>Devolucions</p>
+            </div>
+            <div>
+                <div class="contactos">
+                    <p>joiescrush@gmail.com</p>
+                    <p>+34 000 000 000</p>
+                    <p>C/ la vida es dura 12</p>
+                </div>
+                <div>
+                    <i class="fa fa-instagram redes"></i>
+                    <i class="fa fa-youtube-play redes"></i>
+                    <i class="fa fa-whatsapp redes"></i>
+                    <i class="fa fa-google redes"></i>
+                    {{-- <img src="" alt="instagram">
+                    <img src="" alt="youtube">
+                    <img src="" alt="whatsapp">
+                    <img src="" alt="gmail"> --}}
+                </div>
+            </div>
         </div>
     </div>
     <script src="{{ asset('js/app.js') }}"></script>
