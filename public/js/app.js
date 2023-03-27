@@ -6,6 +6,8 @@ $(document).ready(function(){
     var slider = $('.bxslider').bxSlider({
         mode: 'fade',
         captions: true,
+        nextText: ">",
+        prevText: "<",
     //  slideWidth: 600,
         pager: true,
         pagerCustom: '.bx-pager'
