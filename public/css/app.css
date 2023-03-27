@@ -27,7 +27,7 @@
 }
 h1{
     margin-left: 10px;
-    font-family: 'Titan One';
+    font-family: 'Playfair Display';
     font-style: normal;
     font-weight: 400;
     font-size: 40px;
@@ -117,11 +117,46 @@ svg {
     height: 500px;
     object-fit: cover;
 }
+.slideText{
+    position: absolute;
+    color: var(--blanco);
+}
+#carruselText1{
+    top: 67px;
+    right: 260px;
+}
+#carruselText2{
+    top: 67px;
+    right: 260px;
+}
+#carruselText3{
+    top: 67px;
+    right: 260px;
+}
+#carruselText4{
+    top: 67px;
+    right: 260px;
+}
+#carruselText5{
+    top: 67px;
+    right: 260px;
+}
+.slideText h4{
+    font-family: 'Playfair Display';
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+#slide2{
+    object-position: 50% 10%;
+}
 #slide3{
+    object-position: 50% 69%;
+}
+#slide4{
     object-position: 50% 30%;
 }
 #slide5{
-    object-position: 50% 82%;
+    object-position: 50% 9%;
 }
 .bx-pager {
     text-align: center;
@@ -129,7 +164,7 @@ svg {
     position: absolute !important;
     top: 360px;
     z-index: 500 !important;
-    left: 29%;
+    /* left: 29%; */
     display: block !important;
 }
 
@@ -181,10 +216,10 @@ svg {
     justify-content: space-between;
     align-items: center;
 }
-.fotoImpostor{
+.itemImage{
+    object-fit: cover;
     width: 254.15px;
     height: 340px;
-    background-color: burlywood;
 }
 .btnCarrito{
     text-decoration: none;
@@ -227,4 +262,7 @@ svg {
 .redes{
     margin: 10px;
     font-size:50px !important;
+}
+.pendientesDibu img{
+    width: 100px;
 }
