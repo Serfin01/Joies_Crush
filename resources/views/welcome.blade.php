@@ -63,6 +63,10 @@
                 <a data-slide-index="3" href="" class="pagerDot">•</a>
                 <a data-slide-index="4" href="" class="pagerDot">•</a>
             </div>
+            <div class="controles">
+                <a href="#" class="prev"><img src="{{ asset('img/icons/arrowleft.svg') }}" alt="Anterior"></a>
+                <a href="#" class="next"><img src="{{ asset('img/icons/arrowright.svg') }}" alt="Siguiente"></a>
+            </div>
         </div>
     </div>
     <div class="intro">
