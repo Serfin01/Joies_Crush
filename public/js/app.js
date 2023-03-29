@@ -13,7 +13,10 @@ $(document).ready(function(){
         // nextText: '>',
         // prevText: '<',
         pager: true,
-        pagerCustom: '.bx-pager'
+        pagerCustom: '.bx-pager',
+        minSlides: 1,
+        maxSlides: 5,
+        moveSlides: 5
 
 // .bx-controls-direction{
 //     /* position:absolute; */
