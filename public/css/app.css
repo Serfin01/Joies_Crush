@@ -9,17 +9,25 @@
     --fons1: #303030;
     --blanco: #fff;
 }
+.preHeader, .header, .nav{
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+}
 .preHeader{
     background-color: var(--secundario3);
     display: flex;
     justify-content: center;
     padding: 10px;
+    top: 0;
 }
 .header{
     display: flex;
     justify-content: space-between;
     border-bottom: var(--primary1) 2px solid;
     padding: 10px;
+    top: 43px;
+    background-color: var(--blanco);
 }
 .header div{
     display: flex;
@@ -78,6 +86,8 @@ svg {
 .nav{
     display: flex;
     justify-content: space-around;
+    top: 125px;
+    background: var(--blanco);
 }
 .nav a{
     text-decoration: none;
@@ -108,12 +118,15 @@ svg {
 .intro p{
     margin-bottom: 24px;
 }
+.heroSection{
+    margin-top: 233px;
+}
 .heroSection .bx-wrapper{
     max-width: 100vw !important;
 
 }
 .bxslider img{
-    width: 1440px;
+    width: 100%;
     height: 500px;
     object-fit: cover;
 }
@@ -193,9 +206,12 @@ svg {
     color: var(--primary1);
 }
 .novTitle{
+    margin: 60px 40% 92px 40%;
+}
+.colabTitle{
     margin: 60px 30% 92px 30%;
 }
-.novTitle h2{
+.novTitle h2, .colabTitle h2{
     font-style: normal;
     font-weight: 500;
     font-size: 40px;
@@ -265,8 +281,19 @@ svg {
     margin: 10px;
     font-size:50px !important;
 }
+.pendientesDibu{
+    position:relative;
+}
+.pendientesDibu img:first-child {
+    top: 10px;
+    left: 0px;
+}
 .pendientesDibu img{
+    position: absolute;
     width: 100px;
+    top: -39px;
+    left: 161px;
+    width: 283.46px;
 }
 .controles {
   /* position: absolute !important;
@@ -293,4 +320,22 @@ svg {
     width: 50px;
     height: 50px;
     filter: invert(100%);
+}
+.colaboradores{
+    margin-top: 110px;
+}
+.logosColab{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logosColab img{
+    width: 15%;
+    height: 20%;
+}
+.logosColab img:nth-child(2) {
+    width: 19%;
+}
+.logosColab img:nth-child(3) {
+    width: 14%;
 }
