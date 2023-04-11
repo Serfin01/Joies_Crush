@@ -1,11 +1,4 @@
 @include('header')
-    <div class="nav">
-        <a href="#">Coleccions</a>
-        <a href="#">Arrecades</a>
-        <a href="#">Galeria d’estils</a>
-        <a href="#">Sobre nosaltres</a>
-        <a href="#">Contacte</a>
-    </div>
     <div class="heroSection">
         <div class="bxslider">
             <div><div class="slideText" id="carruselText1"><h4>AMOR ÚNIC</h4><p>Dissenyem les teves arracades artesanalment i amb molta cura. Cada disseny és únic, així com cada Crush que t’agrada.</p></div><img id="slide1" src="{{ asset('img/carrusel/carrusel1.JPG') }}" alt="pendiente morado"></div>

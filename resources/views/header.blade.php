@@ -42,3 +42,11 @@
             </div>
         </div>
     </div>
+    <div class="nav">
+        <a href="#">Coleccions</a>
+        <a href="#">Arrecades</a>
+        <a href="#">Galeria d’estils</a>
+        <a href="#">Sobre nosaltres</a>
+        <a href="#">Contacte</a>
+    </div>
+    <div class="space"></div>

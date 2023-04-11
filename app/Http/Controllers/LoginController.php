@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class LoginController extends Controller
 {
     public function show(){
-        return redirect('login');
+        return view('login');
     }
 }
