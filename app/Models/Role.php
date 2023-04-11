@@ -5,16 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Tag extends Model
+class Role extends Model
 {
     use HasFactory;
-
     protected $fillable = [
         'name',
-        'type',
+        'description',
     ];
-
-    public function products(){
-        return $this->belongsToMany(Product::class, 'product_tags')->withTimestamps();
+    function users() {
+        return $this->hasMany(User::class);
     }
 }
