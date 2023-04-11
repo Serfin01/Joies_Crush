@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'name',
+        'price',
+        'stock',
+    ];
+
+    function purchases() {
+        return $this->belongsToMany(Purchase::class, 'purchase_products')->withTimestamps();
+    }
 }
