@@ -7,7 +7,9 @@
     --primary1: #FF0066;
     --secundario3: #BBF2DD;
     --fons1: #303030;
+    --fons2: #979797;
     --blanco: #fff;
+    --facebook: #0077FF;
 }
 .preHeader, .header, .nav{
     position: fixed;
@@ -338,4 +340,90 @@ svg {
 }
 .logosColab img:nth-child(3) {
     width: 14%;
+}
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.loginForm h2{
+
+}
+.regisForm{
+    display: flex;
+    justify-content: center;
+}
+.regisForm div:not(.check){
+    width: 20%;
+    padding: 0px 60px 0px 60px;
+    margin-top: 30px;
+}
+.regisForm div:first-child{
+    border-right: 2px solid black;
+}
+.regisForm h3{
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 45px;
+    color: var(--fons1);
+    margin-bottom: 25px;
+}
+.regisForm input{
+    width: 100%;
+    border: 1px solid var(--fons1);
+    border-radius: 50px;
+    padding: 10px;
+    margin-bottom: 25px;
+}
+.regisForm input::placeholder{
+    color: var(--fons2);
+    font-size: 16px;
+    line-height: 24px;
+}
+.regisForm .checkbox{
+    width: 24.62px;
+    height: 20px;
+    margin-bottom: 0px;
+}
+.regisForm .check{
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.regisForm .check a{
+    margin-left: auto;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 18px;
+    text-decoration-line: underline;
+    color: var(--fons1);
+}
+.regisForm p{
+    color: var(--fons2);
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 18px;
+}
+.regisForm button{
+    width: 100%;
+    border-radius: 50px;
+    padding-right: 20px;
+    margin-top: 25px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.regisForm .loginbtn{
+    background-color: var(--fons1);
+    color: var(--blanco);
+}
+.regisForm .fbkbtn{
+    background-color: var(--facebook);
+    color: var(--blanco);
+}
+.regisForm .googlebtn{
+    border: 1px solid var(--fons1);
+}
+.regisForm svg:first-child{
+    fill: var(--blanco);
 }
