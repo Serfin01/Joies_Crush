@@ -27,7 +27,11 @@ class TagSeeder extends Seeder
             'tag_type_id'=>$type_color->id,
         ]);
         Tag::factory()->create([
-            'name'=>'verd',
+            'name'=>'vermell ataronjat',
+            'tag_type_id'=>$type_color->id,
+        ]);
+        Tag::factory()->create([
+            'name'=>'taronja',
             'tag_type_id'=>$type_color->id,
         ]);
         Tag::factory()->create([
@@ -35,7 +39,11 @@ class TagSeeder extends Seeder
             'tag_type_id'=>$type_color->id,
         ]);
         Tag::factory()->create([
-            'name'=>'blau',
+            'name'=>'verd llima',
+            'tag_type_id'=>$type_color->id,
+        ]);
+        Tag::factory()->create([
+            'name'=>'verd',
             'tag_type_id'=>$type_color->id,
         ]);
         Tag::factory()->create([
@@ -43,7 +51,65 @@ class TagSeeder extends Seeder
             'tag_type_id'=>$type_color->id,
         ]);
         Tag::factory()->create([
+            'name'=>'blau clar',
+            'tag_type_id'=>$type_color->id,
+        ]);
+        Tag::factory()->create([
+            'name'=>'blau',
+            'tag_type_id'=>$type_color->id,
+        ]);
+        Tag::factory()->create([
+            'name'=>'blau fosc',
+            'tag_type_id'=>$type_color->id,
+        ]);
+        Tag::factory()->create([
             'name'=>'rosa',
+            'tag_type_id'=>$type_color->id,
+        ]);
+        Tag::factory()->create([
+            'name'=>'fúcsia',
+            'tag_type_id'=>$type_color->id,
+        ]);
+        Tag::factory()->create([
+            'name'=>'blanc',
+            'tag_type_id'=>$type_color->id,
+        ]);
+        Tag::factory()->create([
+            'name'=>'negre',
+            'tag_type_id'=>$type_color->id,
+        ]);
+        Tag::factory()->create([
+            'name'=>'gris',
+            'tag_type_id'=>$type_color->id,
+        ]);
+        Tag::factory()->create([
+            'name'=>'marró',
+            'tag_type_id'=>$type_color->id,
+        ]);
+
+        // (possible nou tipus?)
+        Tag::factory()->create([
+            'name'=>'gargot blanc',
+            'tag_type_id'=>$type_color->id,
+        ]);
+        Tag::factory()->create([
+            'name'=>'gargot negre',
+            'tag_type_id'=>$type_color->id,
+        ]);
+        Tag::factory()->create([
+            'name'=>'barres blanques',
+            'tag_type_id'=>$type_color->id,
+        ]);
+        Tag::factory()->create([
+            'name'=>'punts blancs',
+            'tag_type_id'=>$type_color->id,
+        ]);
+        Tag::factory()->create([
+            'name'=>'punts grocs',
+            'tag_type_id'=>$type_color->id,
+        ]);
+        Tag::factory()->create([
+            'name'=>'línies blanques',
             'tag_type_id'=>$type_color->id,
         ]);
 
@@ -74,6 +140,18 @@ class TagSeeder extends Seeder
         ]);
         Tag::factory()->create([
             'name'=>'gota',
+            'tag_type_id'=>$type_shape->id,
+        ]);
+        Tag::factory()->create([
+            'name'=>'forma d\'arbre',
+            'tag_type_id'=>$type_shape->id,
+        ]);
+        Tag::factory()->create([
+            'name'=>"forma de flor",
+            'tag_type_id'=>$type_shape->id,
+        ]);
+        Tag::factory()->create([
+            'name'=>"rosa (flor)",
             'tag_type_id'=>$type_shape->id,
         ]);
 

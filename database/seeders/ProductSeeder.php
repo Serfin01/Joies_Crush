@@ -1,0 +1,221 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
+use App\Models\Product;
+use App\Models\Tag;
+
+class ProductSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     */
+    public function run(): void
+    {
+        //RETRIEVE TAGS
+        $tag_blanc = Tag::where('name','blanc')->first();
+        $tag_vermell = Tag::where('name','vermell')->first();
+        $tag_vermell_ataronjat = Tag::where('name','vermell ataronjat')->first();
+        $tag_taronja = Tag::where('name','taronja')->first();
+        $tag_verdllima = Tag::where('name','verd llima')->first();
+        $tag_verd = Tag::where('name','verd')->first();
+        $tag_blauclar = Tag::where('name','blau clar')->first();
+        $tag_blau = Tag::where('name','blau')->first();
+        $tag_blaufosc = Tag::where('name','blau fosc')->first();
+        $tag_fucsia = Tag::where('name','fúcsia')->first();
+        $tag_gris = Tag::where('name','gris')->first();
+        $tag_marro = Tag::where('name','marró')->first();
+
+        $tag_grg_blanc = Tag::where('name','gargot blanc')->first();
+        $tag_grg_negre = Tag::where('name','gargot negre')->first();
+        $tag_brr_blanc = Tag::where('name','barres blanques')->first();
+        $tag_pnt_blanc = Tag::where('name','punts blancs')->first();
+        $tag_pnt_groc = Tag::where('name','punts grocs')->first();
+        $tag_lin_blanc = Tag::where('name','línies blanques')->first();
+
+        $tag_cercle = Tag::where('name','cercle')->first();
+        $tag_cor = Tag::where('name','cor')->first();
+        $tag_gota = Tag::where('name','gota')->first();
+        $tag_arbre = Tag::where('name',"forma d'arbre")->first();
+        $tag_imant = Tag::where('name',"forma d'imant")->first();
+        $tag_flor = Tag::where('name',"forma de flor")->first();
+        $tag_rosaflor = Tag::where('name',"rosa (flor)")->first();
+
+        $tag_ganxo = Tag::where('name','de ganxo')->first();
+        $tag_boto = Tag::where('name','de botó')->first();
+
+        //SEED PRODUCTS
+        $product = Product::factory()->create([
+            'name' => "Arrecades blaves de ganxo amb dues formes de cercle i arbre",
+            'price' => 5.0,
+        ]);
+        $product->tags()->attach($tag_blaufosc);
+        $product->tags()->attach($tag_grg_blanc);
+        $product->tags()->attach($tag_cercle);
+        $product->tags()->attach($tag_arbre);
+        $product->tags()->attach($tag_ganxo);
+
+        $product = Product::factory()->create([
+            'name' => "Arrecades vermelles i blanques de ganxo amb dues formes d'imant",
+            'price' => 5.0,
+        ]);
+        $product->tags()->attach($tag_vermell);
+        $product->tags()->attach($tag_blanc);
+        $product->tags()->attach($tag_grg_blanc);
+        $product->tags()->attach($tag_imant);
+        $product->tags()->attach($tag_ganxo);
+
+        $product = Product::factory()->create([
+            'name' => "Arrecades grises de ganxo amb dues formes de cercle i arbre",
+            'price' => 5.0,
+        ]);
+        $product->tags()->attach($tag_gris);
+        $product->tags()->attach($tag_grg_blanc);
+        $product->tags()->attach($tag_cercle);
+        $product->tags()->attach($tag_arbre);
+        $product->tags()->attach($tag_ganxo);
+
+        $product = Product::factory()->create([
+            'name' => "Arrecades de ganxo amb forma de flor de color vermell ataronjat amb barres blanques",
+            'price' => 5.0,
+        ]);
+        $product->tags()->attach($tag_vermell_ataronjat);
+        $product->tags()->attach($tag_taronja);
+        $product->tags()->attach($tag_brr_blanc);
+        $product->tags()->attach($tag_flor);
+        $product->tags()->attach($tag_ganxo);
+
+        $product = Product::factory()->create([
+            'name' => "Arrecades de ganxo amb forma de flor de color fúcsia i verd llima",
+            'price' => 5.0,
+        ]);
+        $product->tags()->attach($tag_fucsia);
+        $product->tags()->attach($tag_verdllima);
+        $product->tags()->attach($tag_pnt_blanc);
+        $product->tags()->attach($tag_lin_blanc);
+        $product->tags()->attach($tag_flor);
+        $product->tags()->attach($tag_ganxo);
+
+        $product = Product::factory()->create([
+            'name' => "Arrecades de ganxo amb forma de flor de color blau",
+            'price' => 5.0,
+        ]);
+        $product->tags()->attach($tag_blauclar);
+        $product->tags()->attach($tag_blau);
+        $product->tags()->attach($tag_grg_negre);
+        $product->tags()->attach($tag_lin_blanc);
+        $product->tags()->attach($tag_flor);
+        $product->tags()->attach($tag_ganxo);
+
+        $product = Product::factory()->create([
+            'name' => "Arrecades de botó amb forma de cor de color vermell i blanc",
+            'price' => 5.0,
+        ]);
+        $product->tags()->attach($tag_vermell);
+        $product->tags()->attach($tag_blanc);
+        $product->tags()->attach($tag_cor);
+        $product->tags()->attach($tag_boto);
+
+        $product = Product::factory()->create([
+            'name' => "Arrecades de ganxo amb forma de cor de color vermell amb punts i gargots blancs",
+            'price' => 5.0,
+        ]);
+        $product->tags()->attach($tag_vermell);
+        $product->tags()->attach($tag_grg_blanc);
+        $product->tags()->attach($tag_pnt_blanc);
+        $product->tags()->attach($tag_cor);
+        $product->tags()->attach($tag_ganxo);
+
+        $product = Product::factory()->create([
+            'name' => "Arrecades de ganxo amb forma de gota verda amb una rosa vermella",
+            'price' => 5.0,
+        ]);
+        $product->tags()->attach($tag_verd);
+        $product->tags()->attach($tag_vermell);
+        $product->tags()->attach($tag_grg_blanc);
+        $product->tags()->attach($tag_gota);
+        $product->tags()->attach($tag_rosaflor);
+        $product->tags()->attach($tag_ganxo);
+
+        $product = Product::factory()->create([
+            'name' => "Arrecades de ganxo amb forma d'imant fúcsia amb un cercle i un cor amb punts blancs",
+            'price' => 5.0,
+        ]);
+        $product->tags()->attach($tag_fucsia);
+        $product->tags()->attach($tag_pnt_blanc);
+        $product->tags()->attach($tag_imant);
+        $product->tags()->attach($tag_cercle);
+        $product->tags()->attach($tag_cor);
+        $product->tags()->attach($tag_ganxo);
+
+        $product = Product::factory()->create([
+            'name' => "Arrecades de ganxo amb tres cercles fúcsies",
+            'price' => 5.0,
+        ]);
+        $product->tags()->attach($tag_fucsia);
+        $product->tags()->attach($tag_lin_blanc);
+        $product->tags()->attach($tag_cercle);
+        $product->tags()->attach($tag_ganxo);
+
+        $product = Product::factory()->create([
+            'name' => "Arrecades de ganxo amb forma de flor de color fúcsia",
+            'price' => 5.0,
+        ]);
+        $product->tags()->attach($tag_fucsia);
+        $product->tags()->attach($tag_lin_blanc);
+        $product->tags()->attach($tag_flor);
+        $product->tags()->attach($tag_ganxo);
+
+        $product = Product::factory()->create([
+            'name' => "Arrecades de botó amb forma de cor de color vermell",
+            'price' => 5.0,
+        ]);
+        $product->tags()->attach($tag_vermell);
+        $product->tags()->attach($tag_cor);
+        $product->tags()->attach($tag_boto);
+
+        $product = Product::factory()->create([
+            'name' => "Arrecades de botó amb forma de cor de color vermell amb gargots negres i una rosa petita",
+            'price' => 5.0,
+        ]);
+        $product->tags()->attach($tag_vermell);
+        $product->tags()->attach($tag_grg_negre);
+        $product->tags()->attach($tag_cor);
+        $product->tags()->attach($tag_rosaflor);
+        $product->tags()->attach($tag_boto);
+
+        $product = Product::factory()->create([
+            'name' => "Arrecades de botó amb forma de cor de color vermell amb punts blancs i una rosa petita",
+            'price' => 5.0,
+        ]);
+        $product->tags()->attach($tag_vermell);
+        $product->tags()->attach($tag_pnt_blanc);
+        $product->tags()->attach($tag_cor);
+        $product->tags()->attach($tag_rosaflor);
+        $product->tags()->attach($tag_boto);
+
+        $product = Product::factory()->create([
+            'name' => "Arrecades de botó amb forma de cor de color vermell amb gargots blancs i una rosa petita",
+            'price' => 5.0,
+        ]);
+        $product->tags()->attach($tag_vermell);
+        $product->tags()->attach($tag_grg_blanc);
+        $product->tags()->attach($tag_cor);
+        $product->tags()->attach($tag_rosaflor);
+        $product->tags()->attach($tag_boto);
+
+        $product = Product::factory()->create([
+            'name' => "Arrecades de botó amb 3 gotes fúcsies amb punts grocs, una forma fúcsia amb punts grocs i una forma marró amb gargots blancs",
+            'price' => 5.0,
+        ]);
+        $product->tags()->attach($tag_vermell);
+        $product->tags()->attach($tag_grg_blanc);
+        $product->tags()->attach($tag_pnt_groc);
+        $product->tags()->attach($tag_gota);
+        $product->tags()->attach($tag_rosaflor);
+        $product->tags()->attach($tag_boto);
+    }
+}

@@ -18,4 +18,7 @@ class Product extends Model
     function purchases() {
         return $this->belongsToMany(Purchase::class, 'purchase_products')->withTimestamps();
     }
+    function tags() {
+        return $this->belongsToMany(Tag::class, 'product_tags')->withTimestamps();
+    }
 }
