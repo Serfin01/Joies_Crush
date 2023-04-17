@@ -17,6 +17,7 @@ class PurchaseSeeder extends Seeder
      */
     public function run(): void
     {
+        $user_fake9 = User::where('name','fakeuser9')->first();
         $user_fake14 = User::where('name','fakeuser14')->first();
 
         $product2 = Product::find(2);
@@ -30,5 +31,22 @@ class PurchaseSeeder extends Seeder
         ]);
         $purchase->products()->attach($product2, ['amount' => 1]);
         $purchase->products()->attach($product4, ['amount' => 3]);
+
+        $purchase = Purchase::factory()->create([
+            'user_id' => $user_fake9->id,
+            'price' => ($product2->price * 2 * (0.8)),
+            'creditcard' => Hash::make(Str::random(10)),
+            'payment_date' => now(),
+        ]);
+        $purchase->products()->attach($product2, ['amount' => 2, 'discount' => 0.2]);
+
+        $purchase = Purchase::factory()->create([
+            'user_id' => $user_fake9->id,
+            'price' => ($product4->price * 0.7) + ($product2->price * 2),
+            'creditcard' => Hash::make(Str::random(10)),
+            'payment_date' => now(),
+        ]);
+        $purchase->products()->attach($product2, ['amount' => 2]);
+        $purchase->products()->attach($product4, ['amount' => 1, 'discount' => 0.3]);
     }
 }
