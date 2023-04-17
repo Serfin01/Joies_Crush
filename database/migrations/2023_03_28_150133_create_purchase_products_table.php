@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->foreignId('purchase_id');
             $table->foreignId('product_id');
-            $table->integer('amount');
-            $table->integer('discount');
+            $table->integer('amount')->default(1);
+            $table->decimal('discount', 4, 3)->default(0.0);
             $table->timestamps();
         });
     }
