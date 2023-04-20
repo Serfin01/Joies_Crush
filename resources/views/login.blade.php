@@ -1,5 +1,15 @@
 @include('header')
     <div class="loginForm">
+        @if ($errors->any())
+            <script>
+                Swal.fire({
+                    title: 'Error!',
+                    html: '<ul>@foreach ($errors->all() as $error)<li>{{ $error }}</li>@endforeach</ul>',
+                    icon: 'error',
+                    confirmButtonText: 'Aceptar'
+                });
+            </script>
+        @endif
         <h2>EL MEU COMPTE</h2>
         <div class="regisForm">
             <div>

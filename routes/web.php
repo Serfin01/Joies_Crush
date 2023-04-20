@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\LoginController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,10 +25,14 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware('auth');
 
-Route::get('/login', [App\Http\Controllers\Auth\LoginController::class, 'showLoginForm'])->name('login');
-Route::post('/login', [App\Http\Controllers\Auth\LoginController::class, 'login']);
-Route::get('/register', [App\Http\Controllers\Auth\LoginController::class, 'showLoginForm'])->name('register');
-Route::post('/register', [App\Http\Controllers\Auth\RegisterController::class, 'create']);
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [LoginController::class, 'login']);
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+});
+Route::get('/register', [LoginController::class, 'showLoginForm'])->name('register');
+Route::post('/register', [RegisterController::class, 'create']);
 
 
 Route::get('/colecciones', function () {

@@ -65,10 +65,27 @@ class RegisterController extends Controller
      */
     protected function create(Request $request)
     {
-        return User::create([
+        $request->validate([
+            'name' => 'required',
+            'last_name' => 'required',
+            'email' => 'required|email|unique:users,email',
+            'password' => 'required|confirmed|min:8',
+            'checkbox' => 'accepted',
+        ], [
+            'checkbox.accepted' => 'Debe aceptar la política de privacidad',
+        ]);
+        if ($this->emailExists($request->input('email'))) {
+            return redirect()->back()->withInput()->withErrors(['email' => 'El correo electrónico ya está registrado.']);
+        }
+        User::create([
             'name' => $request->input('name'),
             'email' => $request->input('email'),
             'password' => Hash::make($request->input('password')),
         ]);
+        return view('/');
+    }
+    protected function emailExists($email)
+    {
+        return User::where('email', $email)->exists();
     }
 }

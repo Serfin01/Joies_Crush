@@ -211,7 +211,7 @@ class ProductSeeder extends Seeder
             'name' => "Arrecades de botó amb 3 gotes fúcsies amb punts grocs, una forma fúcsia amb punts grocs i una forma marró amb gargots blancs",
             'price' => 5.0,
         ]);
-        $product->tags()->attach($tag_fuchsia);
+        $product->tags()->attach($tag_fucsia);
         $product->tags()->attach($tag_pnt_groc);
         $product->tags()->attach($tag_marro);
         $product->tags()->attach($tag_grg_blanc);
