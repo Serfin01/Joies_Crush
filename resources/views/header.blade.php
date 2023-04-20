@@ -35,7 +35,11 @@
                     </form>
             </div>
             <div>
-                <img class="iconos" src="{{ asset('img/icons/perfil.png') }}" alt="icono perfil">
+                @if (Auth::check())
+                    <a href="{{ url('/dashboard') }}"><img class="iconos" src="{{ asset('img/icons/perfil.png') }}" alt="icono perfil"></a>
+                @else
+                    <a href="{{ url('/login') }}"><img class="iconos" src="{{ asset('img/icons/perfil.png') }}" alt="icono perfil"></a>
+                @endif
                 <img class="iconos" src="{{ asset('img/icons/corazon.png') }}" alt="icono favoritos">
                 <img class="iconos" src="{{ asset('img/icons/shopping-bag 1.png') }}" alt="icono tienda">
                 {{-- <img class="iconos" src="{{ asset('img/icons/idioma 1.png') }}" alt="icono idioma"> --}}
@@ -43,10 +47,10 @@
         </div>
     </div>
     <div class="nav">
-        <a href="#">Coleccions</a>
-        <a href="#">Arrecades</a>
-        <a href="#">Galeria d’estils</a>
-        <a href="#">Sobre nosaltres</a>
-        <a href="#">Contacte</a>
+        <a href="/colecciones">Coleccions</a>
+        <a href="/pendientes">Arrecades</a>
+        <a href="/galeria">Galeria d’estils</a>
+        <a href="/aboutUs">Sobre nosaltres</a>
+        <a href="/contact">Contacte</a>
     </div>
     <div class="space"></div>

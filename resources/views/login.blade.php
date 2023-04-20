@@ -4,9 +4,10 @@
         <div class="regisForm">
             <div>
                 <h3>INICIAR SESSIÓ</h3>
-                <form action="">
-                    <input type="text" placeholder="Email">
-                    <input type="text" placeholder="Contrasenya">
+                <form action="{{ route('login') }}" method="POST">
+                    @csrf
+                    <input name="email" type="email" placeholder="Email">
+                    <input name="password" type="password" placeholder="Contrasenya">
                     <div class="check">
                         <input type="checkbox" class="checkbox">
                         <p>Recorda’m</p>
@@ -23,18 +24,19 @@
             </div>
             <div>
                 <h3>CREAR COMPTE NOU</h3>
-                <form action="">
-                    <input type="text" placeholder="Nom">
-                    <input type="text" placeholder="Cognoms">
-                    <input type="text" placeholder="Correu electrònic">
-                    <input type="text" placeholder="Contrasenya">
-                    <input type="text" placeholder="Confirmar contrasenya">
+                <form action="{{ route('register') }}" method="POST">
+                    @csrf
+                    <input type="text" name="name" placeholder="Nom">
+                    <input type="text" name="last_name" placeholder="Cognoms">
+                    <input type="email" name="email" placeholder="Correu electrònic">
+                    <input type="password" name="password" placeholder="Contrasenya">
+                    <input type="password" name="password_confirmation" placeholder="Confirmar contrasenya">
                     <div class="check">
                         <input type="checkbox" class="checkbox">
                         <p>Accepto la politica de privacitat</p>
                     </div>
                     <p>JOIES CRUSH S.L., tracta la informació que ens facilita amb la finalitat de possibilitar la prestació adequada del servei concertat i el desenvolupament d'accions comercials. Podeu exercir els vostres drets en qualsevol moment a través de la següent adreça electrònica: joiescrush@gmail.com. Consulteu la informació addicional i detallada a la nostra política de privacitat.</p>
-                    <button class="loginbtn">REGISTRAT</button>
+                    <button type="submit" class="loginbtn">REGISTRAT</button>
                 </form>
             </div>
         </div>
