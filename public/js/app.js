@@ -17,18 +17,6 @@ $(document).ready(function(){
         minSlides: 1,
         maxSlides: 5,
         moveSlides: 5
-
-// .bx-controls-direction{
-//     /* position:absolute; */
-//     /* top: 50%; */
-//     display: flex;
-//     justify-content: space-between;
-// }
-// .bx-controls-direction a{
-//     text-decoration: none;
-//     color: var(--fons1);
-//     font-size: 60px;
-// }
     });
     $('.controles .prev').click(function(e){
         e.preventDefault();
@@ -39,4 +27,18 @@ $(document).ready(function(){
         e.preventDefault();
         slider.goToNextSlide();
     });
+
+    $(document).ready(function() {
+        var $grid = $('.grid').masonry({
+          itemSelector: '.grid-item',
+          columnWidth: '.grid-sizer',
+          percentPosition: true
+        });
+
+        $grid.on('click', 'img', function() {
+          $(this).toggleClass('grid-item--gigante');
+          $grid.masonry('layout');
+        });
+      });
+
 });

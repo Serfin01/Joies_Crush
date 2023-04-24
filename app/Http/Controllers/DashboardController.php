@@ -10,6 +10,9 @@ class DashboardController extends Controller
     public function index()
     {
         $user = Auth::user();
+        if($user->name=="admin"){
+            return view('dashboardAdmin');
+        }
         return view('dashboard', ['name' => $user->name]);
     }
 }

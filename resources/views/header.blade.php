@@ -13,6 +13,10 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.min.css" integrity="sha384-fhRMDwS2GPtEk5g5Cx5QXdtyX9zUK5u43BdDniv5fFZn8wZjJHztSl5o5PQh5yVi" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js" integrity="sha384-dfJnsbJh5H7yX/Ht8GgO50zDDghBcLZBxveG8lQDjOms1F2vH9XhW8ODPLvl/K3s" crossorigin="anonymous"></script>
+
     <title>Joies Crush</title>
 </head>
 <body>
@@ -21,8 +25,8 @@
     </div>
     <div class="header">
         <div>
-            <img src="{{ asset('img/icons/JoyesCrushLogo 1.png') }}" alt="JoiesCrush Logo">
-            <h1>Joies Crush</h1>
+            <a href="/"><img src="{{ asset('img/icons/JoyesCrushLogo 1.png') }}" alt="JoiesCrush Logo"></a>
+            <a href="/"><h1>Joies Crush</h1></a>
         </div>
         <div>
             <div class="search-container">

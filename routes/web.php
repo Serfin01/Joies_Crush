@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\DashboardController;
+use Illuminate\Support\Facades\File;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,7 +43,13 @@ Route::get('/pendientes', function () {
     return view('navPages.pendientes');
 });
 Route::get('/galeria', function () {
-    return view('navPages.galeria');
+    $imagenes = [];
+    foreach(File::allFiles(public_path('img/fotosSinFiltrar/Artisticas-Expo')) as $archivo) {
+        $url = asset('img/fotosSinFiltrar/Artisticas-Expo/' . $archivo->getFilename());
+        $imagenes[] = $url;
+    }
+
+    return view('navPages.galeria', compact('imagenes'));
 });
 Route::get('/aboutUs', function () {
     return view('navPages.aboutUs');

@@ -81,7 +81,4 @@
             <img src="{{ asset('img/icons/Gmaro.png') }}" alt="logo Gmaro">
         </div>
     </div>
-    @include('footer')
-    <script src="{{ asset('js/app.js') }}"></script>
-</body>
-</html>
+@include('footer')
