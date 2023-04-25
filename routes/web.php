@@ -22,14 +22,15 @@ Route::get('/', function () {
 });
 
 //Route::get('/login', [LoginController::class, 'show']);
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware('auth');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware('auth');
 
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::delete('/dashboard/{id}', [DashboardController::class, 'destroy'])->name('dashboard.destroy');
     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 });
 Route::get('/register', [LoginController::class, 'showLoginForm'])->name('register');

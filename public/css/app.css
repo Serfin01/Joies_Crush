@@ -103,6 +103,9 @@ svg {
     margin: 128px 5% 0px 5%;
     display: flex;
 }
+.intro div{
+    width: 100%;
+}
 .intro h2{
     color: var(--primary1);
 }
@@ -186,6 +189,7 @@ svg {
     z-index: 90;
     margin-top: -120px;
     left: 45%;
+    width: 20%;
 }
 
 .bx-pager-item {
@@ -671,4 +675,34 @@ svg {
 }
 .ceos{
     display: flex;
+}
+/* dashboardAdmin */
+.userTable {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+.userTable thead {
+    background-color: var(--primary1);
+    color: var(--blanco);
+}
+.userTable th, td {
+    text-align: left;
+    padding: 8px;
+    border: 1px solid var(--blanco);
+}
+.userTable th:first-child, td:first-child {
+    border-left: none;
+}
+.userTable th:last-child, td:last-child {
+    border-right: none;
+}
+.userTable tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+.userTable tbody tr:hover {
+    background-color: #ddd;
 }
