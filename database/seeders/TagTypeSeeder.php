@@ -38,5 +38,9 @@ class TagTypeSeeder extends Seeder
             'name'=>'size',
             'description'=>'Tags which define product sizes.',
         ]);
+        TagType::factory()->create([
+            'name'=>'texture',
+            'description'=>'Tags which define a product\'s texture (i.e. smooth, bumpy...).',
+        ]);
     }
 }
