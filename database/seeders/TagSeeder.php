@@ -20,6 +20,7 @@ class TagSeeder extends Seeder
         $type_lock = TagType::where('name','lock')->first();
         $type_material = TagType::where('name','material')->first();
         $type_size = TagType::where('name','size')->first();
+        $type_texture = TagType::where('name','texture')->first();
 
         // COLORS
         Tag::factory()->create([
@@ -98,6 +99,10 @@ class TagSeeder extends Seeder
         ]);
         Tag::factory()->create([
             'name'=>'barres blanques',
+            'tag_type_id'=>$type_color->id,
+        ]);
+        Tag::factory()->create([
+            'name'=>'barres taronges',
             'tag_type_id'=>$type_color->id,
         ]);
         Tag::factory()->create([
@@ -187,6 +192,20 @@ class TagSeeder extends Seeder
         Tag::factory()->create([
             'name'=>'petit',
             'tag_type_id'=>$type_size->id,
+        ]);
+
+        // TEXTURES
+        Tag::factory()->create([
+            'name'=>'textura llisa',
+            'tag_type_id'=>$type_texture->id,
+        ]);
+        Tag::factory()->create([
+            'name'=>'textura amb barres',
+            'tag_type_id'=>$type_texture->id,
+        ]);
+        Tag::factory()->create([
+            'name'=>'textura rugosa',
+            'tag_type_id'=>$type_texture->id,
         ]);
     }
 }
