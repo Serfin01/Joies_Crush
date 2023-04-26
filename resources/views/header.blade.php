@@ -25,8 +25,7 @@
     </div>
     <div class="header">
         <div>
-            <a href="/"><img src="{{ asset('img/icons/JoyesCrushLogo 1.png') }}" alt="JoiesCrush Logo"></a>
-            <a href="/"><h1>Joies Crush</h1></a>
+            <img class="logoJoiesCrush" src="{{ asset('img/icons/JoyesCrushLogo.jpg') }}" alt="JoiesCrush Logo"><a href="/" ><h1>Joies Crush</h1></a>
         </div>
         <div>
             <div class="search-container">
@@ -41,12 +40,12 @@
             </div>
             <div>
                 @if (Auth::check())
-                    <a href="{{ url('/dashboard') }}"><img class="iconos" src="{{ asset('img/icons/perfil.png') }}" alt="icono perfil"></a>
+                    <a href="{{ url('/dashboard') }}"><img class="iconos" src="{{ asset('img/icons/user.svg') }}" alt="icono perfil"></a>
                 @else
-                    <a href="{{ url('/login') }}"><img class="iconos" src="{{ asset('img/icons/perfil.png') }}" alt="icono perfil"></a>
+                    <a href="{{ url('/login') }}"><img class="iconos" src="{{ asset('img/icons/user.svg') }}" alt="icono perfil"></a>
                 @endif
-                <img class="iconos" src="{{ asset('img/icons/corazon.png') }}" alt="icono favoritos">
-                <img class="iconos" src="{{ asset('img/icons/shopping-bag 1.png') }}" alt="icono tienda">
+                <img class="iconos" src="{{ asset('img/icons/heart.svg') }}" alt="icono favoritos">
+                <img class="iconos" src="{{ asset('img/icons/bag.svg') }}" alt="icono tienda">
                 {{-- <img class="iconos" src="{{ asset('img/icons/idioma 1.png') }}" alt="icono idioma"> --}}
             </div>
         </div>

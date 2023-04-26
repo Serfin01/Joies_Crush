@@ -33,10 +33,15 @@
 }
 .header a{
     text-decoration: none;
+    /* display: flex; */
 }
 .header div{
     display: flex;
     align-items: center;
+}
+.logoJoiesCrush{
+    width: 4%;
+    border-radius: 50%;
 }
 h1{
     margin-left: 10px;
@@ -91,7 +96,7 @@ svg {
 .nav{
     display: flex;
     justify-content: space-around;
-    top: 125px;
+    top: 124px;
     background: var(--blanco);
 }
 .nav a{
@@ -353,9 +358,9 @@ svg {
     flex-direction: column;
     align-items: center;
 }
-.loginForm h2{
+/* .loginForm h2{
 
-}
+} */
 .regisForm{
     display: flex;
     justify-content: center;
