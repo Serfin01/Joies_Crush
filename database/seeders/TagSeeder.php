@@ -64,11 +64,19 @@ class TagSeeder extends Seeder
             'tag_type_id'=>$type_color->id,
         ]);
         Tag::factory()->create([
+            'name'=>'lila',
+            'tag_type_id'=>$type_color->id,
+        ]);
+        Tag::factory()->create([
             'name'=>'rosa',
             'tag_type_id'=>$type_color->id,
         ]);
         Tag::factory()->create([
             'name'=>'fúcsia',
+            'tag_type_id'=>$type_color->id,
+        ]);
+        Tag::factory()->create([
+            'name'=>'granat',
             'tag_type_id'=>$type_color->id,
         ]);
         Tag::factory()->create([
