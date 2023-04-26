@@ -30,6 +30,7 @@
     padding: 10px;
     top: 43px;
     background-color: var(--blanco);
+    height: 49px;
 }
 .header a{
     text-decoration: none;
@@ -96,8 +97,9 @@ svg {
 .nav{
     display: flex;
     justify-content: space-around;
-    top: 124px;
+    top: 114px;
     background: var(--blanco);
+    height: 100px;
 }
 .nav a{
     text-decoration: none;
@@ -676,7 +678,11 @@ svg {
     align-items: center;
 }
 .aboutUs div img{
-    border-radius: 15px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    /* object-position: top; */
 }
 .ceos{
     display: flex;
