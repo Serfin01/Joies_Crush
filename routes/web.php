@@ -60,3 +60,9 @@ Route::get('/contact', function () {
 });
 //Auth::routes();
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// carritodelhelao
+Route::get('/cart', 'PurchaseController@index');
+Route::post('/cart/add', 'PurchaseController@add');
+Route::post('/cart/update', 'PurchaseController@update');
+Route::post('/cart/remove', 'PurchaseController@remove');

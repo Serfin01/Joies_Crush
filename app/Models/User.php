@@ -47,4 +47,7 @@ class User extends Authenticatable
     function role() {
         return $this->belongsTo(Role::class);
     }
+    public function cartItems(){
+        return $this->hasMany(CartItem::class);
+    }
 }
