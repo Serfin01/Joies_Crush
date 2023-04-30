@@ -17,10 +17,17 @@ class PurchaseController extends Controller
     public function index()
     {
         // Obtener los artículos del carrito para el usuario autenticado
-        $cartItems = CartItem::where('user_id', Auth::id())->get();
+        $user = Auth::user();
+        if (!$user) {
+            return redirect()->route('login');
+        }
+        $cartItems = $user->cartItems;
 
         // Retornar la vista con los artículos del carrito
-        return view('cart', compact('cartItems'));
+        return view('carrito', [
+            'user' => $user,
+            'cartItems' => $cartItems
+        ]);
     }
 
     /**

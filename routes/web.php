@@ -5,7 +5,8 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\File;
-
+use App\Http\Controllers\PurchaseController;
+use App\Http\Controllers\ProductController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -40,18 +41,17 @@ Route::post('/register', [RegisterController::class, 'create']);
 Route::get('/colecciones', function () {
     return view('navPages.colecciones');
 });
-Route::get('/pendientes', function () {
-    return view('navPages.pendientes');
-});
-Route::get('/galeria', function () {
-    $imagenes = [];
-    foreach(File::allFiles(public_path('img/fotosSinFiltrar/Artisticas-Expo')) as $archivo) {
-        $url = asset('img/fotosSinFiltrar/Artisticas-Expo/' . $archivo->getFilename());
-        $imagenes[] = $url;
-    }
+Route::get('/pendientes', [ProductController::class, 'index'])->name('products.index');
+Route::get('/pendientes/{product}', [ProductController::class, 'show'])->name('products.show');
+// Route::get('/galeria', function () {
+//     $imagenes = [];
+//     foreach(File::allFiles(public_path('img/fotosSinFiltrar/Artisticas-Expo')) as $archivo) {
+//         $url = asset('img/fotosSinFiltrar/Artisticas-Expo/' . $archivo->getFilename());
+//         $imagenes[] = $url;
+//     }
 
-    return view('navPages.galeria', compact('imagenes'));
-});
+//     return view('navPages.galeria', compact('imagenes'));
+// });
 Route::get('/aboutUs', function () {
     return view('navPages.aboutUs');
 });
@@ -62,7 +62,7 @@ Route::get('/contact', function () {
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // carritodelhelao
-Route::get('/cart', 'PurchaseController@index');
-Route::post('/cart/add', 'PurchaseController@add');
-Route::post('/cart/update', 'PurchaseController@update');
-Route::post('/cart/remove', 'PurchaseController@remove');
+Route::get('/cart', [PurchaseController::class, 'index']);
+Route::post('/cart/add', [PurchaseController::class, 'add'])->name('cart.add');
+Route::post('/cart/update', [PurchaseController::class, 'update'])->name('cart.update');
+Route::post('/cart/remove', [PurchaseController::class, 'remove'])->name('cart.remove');

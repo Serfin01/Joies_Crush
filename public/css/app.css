@@ -717,3 +717,151 @@ svg {
 .userTable tbody tr:hover {
     background-color: #ddd;
 }
+/* productShow */
+.product {
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+}
+
+.product-image {
+    width: 30%;
+    height: 60%;
+    object-fit: cover;
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.product-details h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary1);
+    margin-bottom: 20px;
+}
+
+.product-price {
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.product-stock {
+    font-size: 1.2rem;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.product-form {
+    display: flex;
+}
+
+.product-form button{
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--blanco);
+    background-color: var(--primary1);
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    width: auto;
+}
+
+.product-button:hover {
+    background-color: #ff0033;
+}
+/* productList */
+/* table {
+    width: 80%;
+    margin: 50px auto;
+    background-color: #fff;
+    border-collapse: collapse;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+th {
+    background-color: #ccc;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+td:last-child {
+    text-align: center;
+}
+
+button[type="submit"] {
+    background-color: #ff0066;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+a.btn {
+    display: inline-block;
+    background-color: #ff0066;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+} */
+.arrecades-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    margin: 50px auto;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.arrecades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    text-align: center;
+}
+
+.arrecades-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.arrecades-details h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--primary1);
+}
+
+.arrecades-details p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.arrecades-details button {
+    background-color: var(--primary1);
+    color: var(--blanco);
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: block;
+    width: 86%;
+}
