@@ -45,7 +45,7 @@
                     <a href="{{ url('/login') }}"><img class="iconos" src="{{ asset('img/icons/user.svg') }}" alt="icono perfil"></a>
                 @endif
                 <img class="iconos" src="{{ asset('img/icons/heart.svg') }}" alt="icono favoritos">
-                <img class="iconos" src="{{ asset('img/icons/bag.svg') }}" alt="icono tienda">
+                <a href="{{ url('/cart') }}"><img class="iconos" src="{{ asset('img/icons/bag.svg') }}" alt="icono tienda"></a>
                 {{-- <img class="iconos" src="{{ asset('img/icons/idioma 1.png') }}" alt="icono idioma"> --}}
             </div>
         </div>

@@ -58,7 +58,8 @@ class ProductSeeder extends Seeder
 
         //SEED PRODUCTS
         $product = Product::factory()->create([
-            'name' => "Arrecades blaves de ganxo amb dues formes de cercle i arbre",
+            'name' => "John Wick",
+            'description' => "Arrecades blaves de ganxo amb dues formes de cercle i arbre",
             'price' => 5.0,
             'img_url' => "img/fotosSinFiltrar/Catalog arracades/2a.jpg",
         ]);
@@ -71,7 +72,8 @@ class ProductSeeder extends Seeder
         $product->tags()->attach($tag_txt_smooth);
 
         $product = Product::factory()->create([
-            'name' => "Arrecades vermelles i blanques de ganxo amb dues formes d'imant",
+            'name' => "Alisa",
+            'description' => "Arrecades vermelles i blanques de ganxo amb dues formes d'imant",
             'price' => 5.0,
             'img_url' => "img/fotosSinFiltrar/Catalog arracades/3d.jpg",
         ]);
@@ -84,7 +86,8 @@ class ProductSeeder extends Seeder
         $product->tags()->attach($tag_txt_smooth);
 
         $product = Product::factory()->create([
-            'name' => "Arrecades grises de ganxo amb dues formes de cercle i arbre",
+            'name' => "Nieves",
+            'description' => "Arrecades grises de ganxo amb dues formes de cercle i arbre",
             'price' => 5.0,
             'img_url' => "img/fotosSinFiltrar/Catalog arracades/4a.jpg",
         ]);
@@ -97,7 +100,8 @@ class ProductSeeder extends Seeder
         $product->tags()->attach($tag_txt_smooth);
 
         $product = Product::factory()->create([
-            'name' => "Arrecades de ganxo amb forma de flor de color vermell ataronjat amb barres blanques",
+            'name' => "Vicente",
+            'description' => "Arrecades de ganxo amb forma de flor de color vermell ataronjat amb barres blanques",
             'price' => 5.0,
             'img_url' => "img/fotosSinFiltrar/Catalog arracades/editF_2.jpg",
         ]);
@@ -110,7 +114,8 @@ class ProductSeeder extends Seeder
         $product->tags()->attach($tag_txt_bars);
 
         $product = Product::factory()->create([
-            'name' => "Arrecades de ganxo amb forma de flor de color fúcsia i verd llima",
+            'name' => "Asunción",
+            'description' => "Arrecades de ganxo amb forma de flor de color fúcsia i verd llima",
             'price' => 5.0,
             'img_url' => "img/fotosSinFiltrar/Catalog arracades/editF_3.jpg",
         ]);
@@ -124,7 +129,8 @@ class ProductSeeder extends Seeder
         $product->tags()->attach($tag_txt_smooth);
 
         $product = Product::factory()->create([
-            'name' => "Arrecades de ganxo amb forma de flor de color blau",
+            'name' => "Ignacio",
+            'description' => "Arrecades de ganxo amb forma de flor de color blau",
             'price' => 5.0,
             'img_url' => "img/fotosSinFiltrar/Catalog arracades/editF_4.jpg",
         ]);
@@ -138,7 +144,8 @@ class ProductSeeder extends Seeder
         $product->tags()->attach($tag_txt_smooth);
 
         $product = Product::factory()->create([
-            'name' => "Arrecades de botó amb forma de cor de color vermell i blanc",
+            'name' => "Evita",
+            'description' => "Arrecades de botó amb forma de cor de color vermell i blanc",
             'price' => 5.0,
             'img_url' => "img/fotosSinFiltrar/Catalog arracades/IMG_4165.jpg",
         ]);
@@ -150,7 +157,8 @@ class ProductSeeder extends Seeder
         $product->tags()->attach($tag_txt_rough);
 
         $product = Product::factory()->create([
-            'name' => "Arrecades de ganxo amb forma de cor de color vermell amb punts i gargots blancs",
+            'name' => "Dimas",
+            'description' => "Arrecades de ganxo amb forma de cor de color vermell amb punts i gargots blancs",
             'price' => 5.0,
             'img_url' => "img/fotosSinFiltrar/Catalog arracades/IMG_5847.jpg",
         ]);
@@ -163,7 +171,8 @@ class ProductSeeder extends Seeder
         $product->tags()->attach($tag_txt_smooth);
 
         $product = Product::factory()->create([
-            'name' => "Arrecades de ganxo amb forma de gota verda amb una rosa vermella",
+            'name' => "Ximen",
+            'description' => "Arrecades de ganxo amb forma de gota verda amb una rosa vermella",
             'price' => 5.0,
             'img_url' => "img/fotosSinFiltrar/Catalog arracades/IMG_5851.jpg",
         ]);
@@ -177,7 +186,8 @@ class ProductSeeder extends Seeder
         $product->tags()->attach($tag_txt_smooth);
 
         $product = Product::factory()->create([
-            'name' => "Arrecades de ganxo amb forma d'imant fúcsia amb un cercle i un cor amb punts blancs",
+            'name' => "Martín",
+            'description' => "Arrecades de ganxo amb forma d'imant fúcsia amb un cercle i un cor amb punts blancs",
             'price' => 5.0,
             'img_url' => "img/fotosSinFiltrar/Catalog arracades/IMG_5856.jpg",
         ]);
@@ -191,7 +201,8 @@ class ProductSeeder extends Seeder
         $product->tags()->attach($tag_txt_rough);
 
         $product = Product::factory()->create([
-            'name' => "Arrecades de ganxo amb tres cercles fúcsies",
+            'name' => "Pepito",
+            'description' => "Arrecades de ganxo amb tres cercles fúcsies",
             'price' => 5.0,
             'img_url' => "img/fotosSinFiltrar/Catalog arracades/IMG_5864.jpg",
         ]);
@@ -204,7 +215,8 @@ class ProductSeeder extends Seeder
         $product->tags()->attach($tag_txt_rough);
 
         $product = Product::factory()->create([
-            'name' => "Arrecades de ganxo amb forma de flor de color fúcsia amb pètals amb línies blanques",
+            'name' => "Flavio",
+            'description' => "Arrecades de ganxo amb forma de flor de color fúcsia amb pètals amb línies blanques",
             'price' => 5.0,
             'img_url' => "img/fotosSinFiltrar/Catalog arracades/IMG_5870.jpg",
         ]);
@@ -217,7 +229,8 @@ class ProductSeeder extends Seeder
         $product->tags()->attach($tag_txt_rough);
 
         $product = Product::factory()->create([
-            'name' => "Arrecades de botó amb forma de cor de color vermell",
+            'name' => "Rocío",
+            'description' => "Arrecades de botó amb forma de cor de color vermell",
             'price' => 5.0,
             'img_url' => "img/fotosSinFiltrar/Catalog arracades/IMG_5876.jpg",
         ]);
@@ -228,7 +241,8 @@ class ProductSeeder extends Seeder
         $product->tags()->attach($tag_txt_rough);
 
         $product = Product::factory()->create([
-            'name' => "Arrecades de botó amb forma de cor de color vermell amb gargots negres i una rosa petita",
+            'name' => "Adelina",
+            'description' => "Arrecades de botó amb forma de cor de color vermell amb gargots negres i una rosa petita",
             'price' => 5.0,
             'img_url' => "img/fotosSinFiltrar/Catalog arracades/IMG_5883.jpg",
         ]);
@@ -241,7 +255,8 @@ class ProductSeeder extends Seeder
         $product->tags()->attach($tag_txt_smooth);
 
         $product = Product::factory()->create([
-            'name' => "Arrecades de botó amb forma de cor de color vermell amb punts blancs i una rosa petita",
+            'name' => "Lino",
+            'description' => "Arrecades de botó amb forma de cor de color vermell amb punts blancs i una rosa petita",
             'price' => 5.0,
             'img_url' => "img/fotosSinFiltrar/Catalog arracades/IMG_5888.jpg",
         ]);
@@ -254,7 +269,8 @@ class ProductSeeder extends Seeder
         $product->tags()->attach($tag_txt_smooth);
 
         $product = Product::factory()->create([
-            'name' => "Arrecades de botó amb 3 gotes fúcsies amb punts grocs, una forma fúcsia amb punts grocs i una forma marró amb gargots blancs",
+            'name' => "Manuel",
+            'description' => "Arrecades de botó amb 3 gotes fúcsies amb punts grocs, una forma fúcsia amb punts grocs i una forma marró amb gargots blancs",
             'price' => 5.0,
             'img_url' => "img/fotosSinFiltrar/Catalog arracades/IMG_5951.jpg",
         ]);
@@ -267,7 +283,8 @@ class ProductSeeder extends Seeder
         $product->tags()->attach($tag_txt_smooth);
 
         $product = Product::factory()->create([
-            'name' => "Arrecades de botó amb 3 gotes blaves amb punts grocs, una forma blava amb punts grocs i una forma marró amb gargots blancs",
+            'name' => "Claudio",
+            'description' => "Arrecades de botó amb 3 gotes blaves amb punts grocs, una forma blava amb punts grocs i una forma marró amb gargots blancs",
             'price' => 5.0,
             'img_url' => "img/fotosSinFiltrar/Catalog arracades/IMG_5960.jpg",
         ]);

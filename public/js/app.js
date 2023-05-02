@@ -41,4 +41,38 @@ $(document).ready(function(){
         });
       });
 
+      // botonesCantidad
+      var quantityInput = $('#quantity');
+      var incrementButton = $('#increment');
+      var decrementButton = $('#decrement');
+
+      // Función para actualizar el valor de la cantidad
+      function updateQuantity(change) {
+          var value = parseInt(quantityInput.val()) + change;
+          if (value < 1) {
+              value = 1;
+          }
+          quantityInput.val(value);
+      }
+
+      // Eventos para los botones "Sumar" y "Restar"
+      incrementButton.click(function() {
+          updateQuantity(1);
+      });
+      decrementButton.click(function() {
+          updateQuantity(-1);
+      });
+
+      // Envío del formulario al servidor
+      $('.product-form').submit(function() {
+          // Deshabilitar los botones para evitar múltiples envíos
+          $('button[type="submit"]', this).prop('disabled', true);
+
+          // Agregar la cantidad actual al formulario
+          $('<input>').attr({
+              type: 'hidden',
+              name: 'quantity',
+              value: quantityInput.val()
+          }).appendTo($(this));
+      });
 });

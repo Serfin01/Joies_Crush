@@ -762,7 +762,7 @@ svg {
     display: flex;
 }
 
-.product-form button{
+.product-form button[type="submit"]{
     font-size: 1rem;
     font-weight: bold;
     color: var(--blanco);
@@ -776,8 +776,34 @@ svg {
 .product-button:hover {
     background-color: #ff0033;
 }
+.quantity{
+    display: flex;
+    align-items: center;
+}
+.quantity input{
+    width: 10%;
+    text-align: center;
+    border: none;
+}
+.quantity button{
+    background-color: var(--primary1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--blanco);
+    font-size: 30px;
+    width: 20px;
+    height: 20px;
+    margin-inline: 16px;
+}
 /* productList */
-/* table {
+.cartTitle{
+    color: var(--primary1);
+    margin-left: 10%;
+}
+
+.cartTable {
     width: 80%;
     margin: 50px auto;
     background-color: #fff;
@@ -786,24 +812,26 @@ svg {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 }
 
-th {
+.cartTable th {
     background-color: #ccc;
     color: #fff;
     padding: 10px;
     text-align: left;
 }
-
-td {
+.cartTable img {
+    width: 50%;
+}
+.cartTable td {
     padding: 10px;
     border-bottom: 1px solid #ddd;
     border-radius: 5px;
 }
 
-td:last-child {
+.cartTable td:last-child {
     text-align: center;
 }
 
-button[type="submit"] {
+.cartTable button[type="submit"] {
     background-color: #ff0066;
     color: #fff;
     padding: 10px 20px;
@@ -812,14 +840,15 @@ button[type="submit"] {
     cursor: pointer;
 }
 
-a.btn {
+.cartTable a.btn {
     display: inline-block;
     background-color: #ff0066;
     color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
-} */
+}
+/* arrecadesPage */
 .arrecades-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -845,6 +874,10 @@ a.btn {
     height: auto;
 }
 
+.arrecades-details a{
+    text-decoration: none;
+}
+
 .arrecades-details h2 {
     font-size: 1.2rem;
     font-weight: bold;
@@ -864,4 +897,9 @@ a.btn {
     border-radius: 5px;
     display: block;
     width: 86%;
+}
+.arrecades-cantidad{
+    width: 20%;
+    text-align: center;
+    margin-bottom: 10px;
 }

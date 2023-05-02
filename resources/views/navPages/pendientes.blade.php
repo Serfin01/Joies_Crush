@@ -34,10 +34,13 @@
                     <img src="{{ asset($product->img_url) }}" alt="{{ $product->name }}">
                 </div>
                 <div class="arrecades-details">
-                    <h2>{{ $product->name }}</h2>
+                    <a href="{{ route('products.show', $product->id) }}"><h2>{{ $product->name }}</h2></a>
                     <p>Price: {{ $product->price }}€</p>
                     <form action="{{ route('cart.add', $product->id) }}" method="POST">
                         @csrf
+                        <input type="hidden" name="product_id" value="{{ $product->id }}">
+                        <label for="quantity">Cantidad:</label>
+                        <input class="arrecades-cantidad" type="number" name="quantity" value="1" min="1">
                         <button type="submit">Agregar al carrito</button>
                     </form>
                 </div>

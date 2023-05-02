@@ -44,7 +44,7 @@ class PurchaseController extends Controller
         $cartItem->product_id = $productId;
         $cartItem->user_id = Auth::id();
         $cartItem->quantity = $quantity;
-        $cartItem->price = $product->price;
+        // $cartItem->price = $product->price;
         $cartItem->save();
 
         // Redirigir al usuario al carrito de compras
