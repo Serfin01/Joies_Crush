@@ -27,6 +27,81 @@
             @endforeach
         </tbody>
     </table> --}}
+    <div class="tags">
+        <div>
+            <label for="color">Color:</label>
+            <select name="color">
+                <option value="no">no</option>
+                <option value="vermell">vermell</option>
+                <option value="vermell ataronjat">vermell ataronjat</option>
+                <option value="taronja">taronja</option>
+                <option value="groc">groc</option>
+                <option value="verd llima">verd llima</option>
+                <option value="verd">verd</option>
+                <option value="cian">cian</option>
+                <option value="blau clar">blau clar</option>
+                <option value="blau">blau</option>
+                <option value="blau fosc">blau fosc</option>
+                <option value="rosa">rosa</option>
+                <option value="fúcsia">fúcsia</option>
+                <option value="blanc">blanc</option>
+                <option value="negre">negre</option>
+                <option value="gris">gris</option>
+                <option value="marró">marró</option>
+            </select>
+        </div>
+        <div>
+            <label for="forma">Forma:</label>
+            <select name="forma">
+                <option value="no">no</option>
+                <option value="imant">imant</option>
+                <option value="cercle">cercle</option>
+                <option value="quadrat">quadrat</option>
+                <option value="rombe">rombe</option>
+                <option value="rectangle">rectangle</option>
+                <option value="cor">cor</option>
+                <option value="gota">gota</option>
+                <option value="arbre">arbre</option>
+                <option value="flor">flor</option>
+                <option value="rosa">rosa</option>
+            </select>
+        </div>
+        <div>
+            <label for="tancat">Tancat:</label>
+            <select name="tancat">
+                <option value="no">no</option>
+                <option value="ganxo">ganxo</option>
+                <option value="botó">botó</option>
+            </select>
+        </div>
+        <div>
+            <label for="material">Material:</label>
+            <select name="material">
+                <option value="no">no</option>
+                <option value="acer hipoalergènic">acer hipoalergènic</option>
+                <option value="metall">metall</option>
+            </select>
+        </div>
+        <div>
+            <label for="tamany">Tamany:</label>
+            <select name="tamany">
+                <option value="no">no</option>
+                <option value="gran">gran</option>
+                <option value="mitjà">mitjà</option>
+                <option value="petit">petit</option>
+            </select>
+        </div>
+        <div>
+            <label for="textura">Textura:</label>
+            <select name="textura">
+                <option value="no">no</option>
+                <option value="llisa">llisa</option>
+                <option value="barres">barres</option>
+                <option value="rugosa">rugosa</option>
+            </select>  
+        </div>
+        <button>Cerca</button>
+    </div>
     <div class="arrecades-container">
         @foreach($products as $product)
             <div class="arrecades">

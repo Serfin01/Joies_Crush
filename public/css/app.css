@@ -112,6 +112,21 @@ svg {
     border-bottom: var(--primary1) 2px solid;
     /* text-decoration-color: var(--primary1); */
 }
+.navPink{
+    color: var(--primary1) !important;
+}
+.cart-count{
+    position: relative;
+}
+.cart-count div{
+    position: absolute;
+    top: 25px;
+    left: 2px;
+    background-color: var(--primary1);
+    padding: 1px 10px;
+    border-radius: 50%;
+    color: var(--blanco);
+}
 .intro{
     margin: 128px 5% 0px 5%;
     display: flex;
@@ -909,4 +924,47 @@ svg {
     width: 20%;
     text-align: center;
     margin-bottom: 10px;
+}
+/* tags */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+  
+.tags select {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    margin: 5px;
+    background-color: var(--blanco);
+    color: var(--fons1);
+}
+
+.tags select:focus {
+    outline: none;
+}
+
+.tags label {
+    margin-right: 10px;
+    font-weight: bold;
+    color: var(--primary1);
+}
+
+.tags option {
+    background-color: var(--blanco);
+    color: var(--fons1);
+}
+
+.tags button{
+    background-color: var(--primary1);
+    color: var(--blanco);
+    width: auto;
+    border-radius: 5px;
+    padding-inline: 13px;
+}
+.tags div{
+    margin-left: 10px;
 }

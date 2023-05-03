@@ -48,7 +48,7 @@ class PurchaseController extends Controller
         $cartItem->save();
 
         // Redirigir al usuario al carrito de compras
-        return redirect('/cart');
+        return redirect('/pendientes');
     }
 
     /**

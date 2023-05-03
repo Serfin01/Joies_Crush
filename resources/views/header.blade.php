@@ -45,15 +45,20 @@
                     <a href="{{ url('/login') }}"><img class="iconos" src="{{ asset('img/icons/user.svg') }}" alt="icono perfil"></a>
                 @endif
                 <img class="iconos" src="{{ asset('img/icons/heart.svg') }}" alt="icono favoritos">
-                <a href="{{ url('/cart') }}"><img class="iconos" src="{{ asset('img/icons/bag.svg') }}" alt="icono tienda"></a>
+                <a class="cart-count" href="{{ url('/cart') }}">
+                    <img class="iconos" src="{{ asset('img/icons/bag.svg') }}" alt="icono tienda">
+                    @if($user->cartItems()->count() > 0)
+                        <div>{{ $user->cartItems()->count() }}</div>
+                    @endif
+                </a>
                 {{-- <img class="iconos" src="{{ asset('img/icons/idioma 1.png') }}" alt="icono idioma"> --}}
             </div>
         </div>
     </div>
     <div class="nav">
-        <a href="/pendientes">Arrecades</a>
-        <a href="/galeria">Galeria d’estils</a>
-        <a href="/aboutUs">Sobre nosaltres</a>
-        <a href="/contact">Contacte</a>
+        <a href="/pendientes" class="{{ request()->is('pendientes') ? 'navPink' : '' }}">Arrecades</a>
+        <a href="/galeria" class="{{ request()->is('galeria') ? 'navPink' : '' }}">Galeria d’estils</a>
+        <a href="/aboutUs" class="{{ request()->is('aboutUs') ? 'navPink' : '' }}">Sobre nosaltres</a>
+        <a href="/contact" class="{{ request()->is('contact') ? 'navPink' : '' }}">Contacte</a>
     </div>
     <div class="space"></div>
