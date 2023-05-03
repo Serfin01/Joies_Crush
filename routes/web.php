@@ -33,14 +33,15 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::delete('/dashboard/{id}', [DashboardController::class, 'destroy'])->name('dashboard.destroy');
     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+    // carritodelhelao
+    Route::get('/cart', [PurchaseController::class, 'index']);
+    Route::post('/cart/add', [PurchaseController::class, 'add'])->name('cart.add');
+    Route::post('/cart/update/{id}', [PurchaseController::class, 'update'])->name('cart.update');
+    Route::post('/cart/remove/{id}', [PurchaseController::class, 'remove'])->name('cart.remove');
 });
 Route::get('/register', [LoginController::class, 'showLoginForm'])->name('register');
 Route::post('/register', [RegisterController::class, 'create']);
 
-
-Route::get('/colecciones', function () {
-    return view('navPages.colecciones');
-});
 Route::get('/pendientes', [ProductController::class, 'index'])->name('products.index');
 Route::get('/pendientes/{product}', [ProductController::class, 'show'])->name('products.show');
 // Route::get('/galeria', function () {
@@ -61,8 +62,3 @@ Route::get('/contact', function () {
 //Auth::routes();
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-// carritodelhelao
-Route::get('/cart', [PurchaseController::class, 'index']);
-Route::post('/cart/add', [PurchaseController::class, 'add'])->name('cart.add');
-Route::post('/cart/update', [PurchaseController::class, 'update'])->name('cart.update');
-Route::post('/cart/remove', [PurchaseController::class, 'remove'])->name('cart.remove');

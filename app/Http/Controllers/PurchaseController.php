@@ -95,14 +95,14 @@ class PurchaseController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request)
+    public function update(Request $request, $id)
     {
-        // Obtener los datos del formulario
-        $cartItemId = $request->input('cart_item_id');
+        // $cartItemId = $request->input('cart_item_id');
         $quantity = $request->input('quantity');
-
+        
         // Actualizar la cantidad del artículo en el carrito
-        $cartItem = CartItem::find($cartItemId);
+        $cartItem = CartItem::find($id);
+        // dd($cartItem);
         $cartItem->quantity = $quantity;
         $cartItem->save();
 
@@ -113,15 +113,10 @@ class PurchaseController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function remove(Request $request)
+    public function remove(Request $request, $id)
     {
-        // Obtener el ID del artículo del carrito a eliminar
-        $cartItemId = $request->input('cart_item_id');
+        CartItem::destroy($id);
 
-        // Eliminar el artículo del carrito
-        CartItem::destroy($cartItemId);
-
-        // Redirigir al usuario al carrito de compras
         return redirect('/cart');
     }
 

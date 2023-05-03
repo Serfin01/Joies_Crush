@@ -51,7 +51,6 @@
         </div>
     </div>
     <div class="nav">
-        <a href="/colecciones">Coleccions</a>
         <a href="/pendientes">Arrecades</a>
         <a href="/galeria">Galeria d’estils</a>
         <a href="/aboutUs">Sobre nosaltres</a>

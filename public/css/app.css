@@ -103,8 +103,14 @@ svg {
 }
 .nav a{
     text-decoration: none;
+    /* text-decoration-color: transparent; */
     color: var(--fons1);
     padding: 36px 0px 57px 0px;
+    height: 0px;
+}
+.nav a:hover{
+    border-bottom: var(--primary1) 2px solid;
+    /* text-decoration-color: var(--primary1); */
 }
 .intro{
     margin: 128px 5% 0px 5%;
@@ -838,6 +844,7 @@ svg {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-bottom: 15px;
 }
 
 .cartTable a.btn {
