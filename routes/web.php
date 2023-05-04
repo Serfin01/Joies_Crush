@@ -7,6 +7,7 @@ use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\File;
 use App\Http\Controllers\PurchaseController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ContactMailController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -59,6 +60,7 @@ Route::get('/aboutUs', function () {
 Route::get('/contact', function () {
     return view('navPages.contact');
 });
+Route::post('/contact', [ContactMailController::class, 'store'])->name('contact.store');
 //Auth::routes();
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

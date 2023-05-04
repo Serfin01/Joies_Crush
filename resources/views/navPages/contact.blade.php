@@ -1,6 +1,7 @@
 @include('header')
     <div class="contactUs">
-        <form class="animate__animated animate__fadeInUp">
+        <form class="animate__animated animate__fadeInUp" method="POST" action="{{ route('contact.store') }}">
+            @csrf
             <h2>Contacta amb nosaltres</h2>
             <label for="name">Nom:</label>
             <input type="text" id="name" name="name" required class="animate__animated animate__fadeInUp">
