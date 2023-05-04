@@ -5,8 +5,9 @@
             <tr>
                 <th>Imagen</th>
                 <th>Nombre</th>
-                <th>Precio</th>
+                <th>Precio Unitario</th>
                 <th>Cantidad</th>
+                <th>Precio Total</th>
                 <th>Acciones</th>
             </tr>
         </thead>
@@ -15,11 +16,12 @@
                 <tr>
                     <td><img src="{{ asset($cartItem->product->img_url) }}" alt="{{ $cartItem->name }}"></td>
                     <td>{{ $cartItem->product->name }}</td>
-                    <td>{{ $cartItem->product->price }}</td>
+                    <td>{{ $cartItem->product->price }}€</td>
                         <form action="{{ route('cart.update', $cartItem->id) }}" method="POST">
                             @csrf
                             {{-- <input type="hidden" name="product_id" value="{{ $cartItem->id }}"> --}}
-                            <td><input class="arrecades-cantidad" type="number" name="quantity" value="{{ $cartItem->quantity }}" min="1"></td>
+                    <td><input class="arrecades-cantidad" type="number" name="quantity" value="{{ $cartItem->quantity }}" min="1"></td>
+                    <td>{{ $cartItem->product->price * $cartItem->quantity }}€</td>
                     <td>
                             <button type="submit">Editar</button>
                         </form>
@@ -33,4 +35,42 @@
             @endforeach
         </tbody>
     </table>
+    <table class="cartTotalsTable">
+        <tbody>
+            @php
+                $subtotal = 0;
+                foreach ($user->cartItems as $cartItem) {
+                    $subtotal += $cartItem->quantity * $cartItem->product->price;
+                }
+                $shipping = ($subtotal >= 35) ? 0 : 15;
+                $total = $subtotal + $shipping;
+            @endphp
+            <tr>
+                <td>Subtotal</td>
+                <td>{{ $subtotal }}€</td>
+            </tr>
+            <tr>
+                <td>Gastos de envío</td>
+                <td>{{ $shipping }}€</td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td>{{ $total }}€</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="pay">
+                    <form action="" method="POST">
+                        @csrf
+                        <button type="submit">Pagar</button>
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+       
+    
+    {{-- <form action="{{ route('checkout') }}" method="POST">
+        @csrf
+        <button type="submit">Ir a pagar</button>
+    </form> --}}
 @include('footer')

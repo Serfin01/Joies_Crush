@@ -47,7 +47,7 @@
                 <img class="iconos" src="{{ asset('img/icons/heart.svg') }}" alt="icono favoritos">
                 <a class="cart-count" href="{{ url('/cart') }}">
                     <img class="iconos" src="{{ asset('img/icons/bag.svg') }}" alt="icono tienda">
-                    @if($user->cartItems()->count() > 0)
+                    @if($user && $user->cartItems()->count() > 0)
                         <div>{{ $user->cartItems()->count() }}</div>
                     @endif
                 </a>
