@@ -98,7 +98,7 @@
                 <option value="llisa">llisa</option>
                 <option value="barres">barres</option>
                 <option value="rugosa">rugosa</option>
-            </select>  
+            </select>
         </div>
         <button>Cerca</button>
     </div>
