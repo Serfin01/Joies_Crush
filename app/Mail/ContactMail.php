@@ -15,13 +15,22 @@ class ContactMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    protected $maildata;
+    protected $sender_name;
+    protected $sender_email;
+    protected $message;
     /**
      * Create a new message instance.
      */
     public function __construct(protected Request $request)
     {
-        $this->maildata = $request->input();
+        $validated = $request->validate([
+            'name' => 'required|max:255',
+            'email' => 'required|email',
+            'message' => 'required',
+        ]);
+        $this->sender_name = $validated['name'];
+        $this->sender_email = $validated['email'];
+        $this->message = $validated['message'];
     }
 
     /**
@@ -30,8 +39,8 @@ class ContactMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            from: new Address('jeffrey@example.com', 'Jeffrey Way'),
-            subject: 'Contact Mail'
+            from: new Address($this->sender_email, $this->sender_name),
+            subject: 'Joies Crush Contact Mail'
         );
     }
 
@@ -43,9 +52,9 @@ class ContactMail extends Mailable
         return new Content(
             view: 'mails.contact',
             with: [
-                'name' => $this->maildata['name'],
-                'email' => $this->maildata['email'],
-                'mailmessage' => $this->maildata['message'],
+                'name' => $this->sender_name,
+                'email' => $this->sender_email,
+                'mailmessage' => $this->message,
             ]
         );
     }

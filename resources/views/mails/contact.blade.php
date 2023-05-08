@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
 </head>
 <body>
-    <h2>{{ $name }}</h2>
-    <h4>{{ $email }}</h4>
+    <b>{{ $name }}</b><span> (<i>{{ $email ?? "Email not available" }}</i>)</span>
     <p>{{ $mailmessage }}</p>
 </body>
 </html>
