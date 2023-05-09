@@ -7,8 +7,9 @@ use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\File;
 use App\Http\Controllers\PurchaseController;
 use App\Http\Controllers\ProductController;
-use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ContactMailController;
 use App\Http\Controllers\PaymentController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -64,7 +65,9 @@ Route::get('/aboutUs', function () {
 Route::get('/contact', function () {
     return view('navPages.contact');
 });
-Route::post('/enviar-correo', [ContactController::class, 'enviarCorreo'])->name('enviar-correo');
+
+Route::post('/contact', [ContactMailController::class, 'store'])->name('contact.store');
+
 //Auth::routes();
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
