@@ -59,9 +59,9 @@
             </tr>
             <tr>
                 <td colspan="2" class="pay">
-                    <form action="" method="POST">
+                    <form action="{{route('checkout.pay')}}" method="GET">
                         @csrf
-                        <button type="submit">Pagar</button>
+                        <button type="submit" action="{{route('checkout.pay')}}">Pagar</button>
                     </form>
                 </td>
             </tr>

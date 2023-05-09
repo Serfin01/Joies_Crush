@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\File;
 use App\Http\Controllers\PurchaseController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ContactMailController;
+use App\Http\Controllers\PaymentController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -39,6 +41,9 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/cart/add', [PurchaseController::class, 'add'])->name('cart.add');
     Route::post('/cart/update/{id}', [PurchaseController::class, 'update'])->name('cart.update');
     Route::post('/cart/remove/{id}', [PurchaseController::class, 'remove'])->name('cart.remove');
+    Route::get('/checkout/pay', [PaymentController::class, 'show'])->name('checkout.pay');
+    Route::post('/checkout/{id}', [PaymentController::class, 'checkout'])->name('checkout');
+
 });
 Route::get('/register', [LoginController::class, 'showLoginForm'])->name('register');
 Route::post('/register', [RegisterController::class, 'create']);
@@ -60,7 +65,9 @@ Route::get('/aboutUs', function () {
 Route::get('/contact', function () {
     return view('navPages.contact');
 });
+
 Route::post('/contact', [ContactMailController::class, 'store'])->name('contact.store');
+
 //Auth::routes();
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
