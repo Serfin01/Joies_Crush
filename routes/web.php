@@ -41,7 +41,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/cart/update/{id}', [PurchaseController::class, 'update'])->name('cart.update');
     Route::post('/cart/remove/{id}', [PurchaseController::class, 'remove'])->name('cart.remove');
     Route::get('/checkout/pay', [PaymentController::class, 'show'])->name('checkout.pay');
-    Route::post('/checkout', [PaymentController::class, 'checkout'])->name('checkout');
+    Route::post('/checkout/{id}', [PaymentController::class, 'checkout'])->name('checkout');
 
 });
 Route::get('/register', [LoginController::class, 'showLoginForm'])->name('register');
