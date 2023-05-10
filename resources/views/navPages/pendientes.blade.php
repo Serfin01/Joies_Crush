@@ -98,7 +98,10 @@
                         <input type="hidden" name="product_id" value="{{ $product->id }}">
                         <label for="quantity">{{ __('Quantitat:') }}</label>
                         <input class="arrecades-cantidad" type="number" name="quantity" value="1" min="1">
-                        <button type="submit">{{ __('Afegir al carret') }}</button>
+                        <div id="favDiv">
+                            <button type="submit">{{ __('Afegir al carret') }}</button>
+                            <img class="iconos fav" src="{{ asset('img/icons/heart.svg') }}" alt="icono favoritos">
+                        </div>
                     </form>
                 </div>
             </div>

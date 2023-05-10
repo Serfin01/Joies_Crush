@@ -58,6 +58,14 @@ h1{
     height: 40px;
     padding: 0px 10px 0px 10px;
 }
+#favDiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.fav{
+    /* height: 26px; */
+}
 .search-container form {
     background-color: white;
     width: 272px;
@@ -918,7 +926,7 @@ svg {
     padding: 10px 20px;
     border-radius: 5px;
     display: block;
-    width: 86%;
+    width: 50%;
 }
 .arrecades-cantidad{
     width: 20%;
