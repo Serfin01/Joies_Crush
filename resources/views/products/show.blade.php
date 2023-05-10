@@ -16,6 +16,7 @@
                     <input type="number" name="quantity" id="quantity" value="1" min="1" readonly>
                     <button type="button" id="increment">+</button>
                     <button type="button" id="decrement">-</button>
+                    <img class="iconos fav" src="{{ asset('img/icons/heart.svg') }}" alt="icono favoritos">
                 </div>
                 <button type="submit">Agregar al carrito</button>
             </form>

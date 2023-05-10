@@ -789,6 +789,7 @@ svg {
 
 .product-form {
     display: flex;
+    justify-content: space-between;
 }
 
 .product-form button[type="submit"]{

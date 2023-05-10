@@ -78,7 +78,7 @@ $(document).ready(function(){
     $('.fav').on('click', function(){
         var img = $(this);
         if(img.attr('src')=="/img/icons/fullheart.svg"){
-            img.attr('src',"img/icons/heart.svg");
+            img.attr('src',"http://127.0.0.1:8000/img/icons/heart.svg");
             img.animate({
                 opacity: 0.5,
                 width: '+=20px',
