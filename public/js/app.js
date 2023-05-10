@@ -74,35 +74,25 @@ $(document).ready(function(){
         console.log("aa")
         Swal.fire('Gracies per la teva compra!', '', 'success');
     })
-    
+
     $('.fav').on('click', function(){
-        var img = $(this);
+        let img = $(this);
+        console.log(img.attr('src'));
         if(img.attr('src')=="/img/icons/fullheart.svg"){
-            img.attr('src',"http://127.0.0.1:8000/img/icons/heart.svg");
-            img.animate({
-                opacity: 0.5,
-                width: '+=20px',
-                height: '+=20px'
-            }, 100, function() {
-                img.animate({
-                    opacity: 1,
-                    width: '-=20px',
-                    height: '-=20px'
-                }, 100);
-            });
+            img.attr('src',"/img/icons/heart.svg");
         }else{
             img.attr('src',"/img/icons/fullheart.svg");
-            img.animate({
-                opacity: 0.5,
-                width: '+=20px',
-                height: '+=20px'
-            }, 100, function() {
-                img.animate({
-                    opacity: 1,
-                    width: '-=20px',
-                    height: '-=20px'
-                }, 100);
-            });
         }
+        img.animate({
+            opacity: 0.5,
+            width: '+=20px',
+            height: '+=20px'
+        }, 100, function() {
+            img.animate({
+                opacity: 1,
+                width: '-=20px',
+                height: '-=20px'
+            }, 100);
+        });
     })
 });
