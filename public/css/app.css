@@ -63,8 +63,9 @@ h1{
     align-items: center;
     justify-content: space-between;
 }
-.fav{
+.fav:hover{
     /* height: 26px; */
+    cursor: pointer;
 }
 .search-container form {
     background-color: white;
@@ -942,7 +943,7 @@ svg {
     align-items: center;
     font-size: 16px;
 }
-  
+
 .tags select {
     padding: 8px;
     border-radius: 5px;
