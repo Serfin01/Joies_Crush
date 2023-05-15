@@ -100,7 +100,9 @@
                         <input class="arrecades-cantidad" type="number" name="quantity" value="1" min="1">
                         <div id="favDiv">
                             <button type="submit">{{ __('Afegir al carret') }}</button>
-                            <img class="iconos fav" src="{{ asset('img/icons/heart.svg') }}" alt="icono favoritos" data-favd="{{ false }}" data-product_id="{{ $product->id }}">
+                            <img class="iconos fav" src="{{ asset('img/icons/heart.svg') }}" alt="icono favoritos"
+                            data-favd="{{ (null !== Auth::user()) ? (strval($product->usersFavourites()->where('user_id',Auth::user()->id)->first() !== null) ? "true" : "false") : "false" }}"
+                            data-product_id="{{ $product->id }}">
                         </div>
                     </form>
                 </div>

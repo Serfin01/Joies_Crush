@@ -72,17 +72,28 @@ $(document).ready(function(){
     $('#btnPay').on("click", function(e){
         // e.preventDefault();
         console.log("aa")
-        Swal.fire('Gracies per la teva compra!', '', 'success');
+        Swal.fire('Gràcies per la teva compra!', '', 'success');
     })
 
     $('.fav').on('click', function(){
         let img = $(this);
-        console.log(img.attr('src'));
+        img.data('favd', !img.data('favd'));
+        if(img.data('favd')) {
+            img.attr('src',"/img/icons/fullheart.svg");
+        } else {
+            img.attr('src',"/img/icons/heart.svg");
+        }
+        $.ajax({
+            type: "post",
+            url: ""
+        });
+        /*
         if(img.attr('src')=="/img/icons/fullheart.svg"){
             img.attr('src',"/img/icons/heart.svg");
         }else{
             img.attr('src',"/img/icons/fullheart.svg");
         }
+        */
         img.animate({
             opacity: 0.5,
             width: '+=20px',

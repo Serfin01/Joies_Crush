@@ -21,4 +21,7 @@ class Product extends Model
     function tags() {
         return $this->belongsToMany(Tag::class, 'product_tags')->withTimestamps();
     }
+    public function usersFavourites() {
+        return $this->belongsToMany(User::class, 'users_favourites')->withTimestamps();
+    }
 }
