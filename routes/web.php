@@ -7,6 +7,7 @@ use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\File;
 use App\Http\Controllers\PurchaseController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\FavouriteController;
 use App\Http\Controllers\ContactMailController;
 use App\Http\Controllers\PaymentController;
 
@@ -44,6 +45,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/checkout/pay', [PaymentController::class, 'show'])->name('checkout.pay');
     Route::post('/checkout/{id}', [PaymentController::class, 'checkout'])->name('checkout');
 
+    Route::post('/favourites/{product}', [FavouriteController::class, 'addById'])->name('favourites.addbyid');
 });
 Route::get('/register', [LoginController::class, 'showLoginForm'])->name('register');
 Route::post('/register', [RegisterController::class, 'create']);

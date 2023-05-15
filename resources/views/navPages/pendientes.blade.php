@@ -98,10 +98,11 @@
                         <input type="hidden" name="product_id" value="{{ $product->id }}">
                         <label for="quantity">{{ __('Quantitat:') }}</label>
                         <input class="arrecades-cantidad" type="number" name="quantity" value="1" min="1">
+                        @php($favd = (null !== Auth::user()) && ($product->usersFavourites()->where('user_id',Auth::user()->id)->first() !== null))
                         <div id="favDiv">
                             <button type="submit">{{ __('Afegir al carret') }}</button>
-                            <img class="iconos fav" src="{{ asset('img/icons/heart.svg') }}" alt="icono favoritos"
-                            data-favd="{{ (null !== Auth::user()) ? (strval($product->usersFavourites()->where('user_id',Auth::user()->id)->first() !== null) ? "true" : "false") : "false" }}"
+                            <img class="iconos fav" src="{{ asset($favd ? 'img/icons/fullheart.svg' : 'img/icons/heart.svg') }}" alt="icono favoritos"
+                            data-favd="{{ $favd ? "true" : "false" }}"
                             data-product_id="{{ $product->id }}">
                         </div>
                     </form>

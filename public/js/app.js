@@ -84,8 +84,14 @@ $(document).ready(function(){
             img.attr('src',"/img/icons/heart.svg");
         }
         $.ajax({
-            type: "post",
-            url: ""
+            type: "POST",
+            url: `/favourites/${img.data('product_id')}`,
+            data: {
+                "_token": $("meta[name='csrf-token']").attr("content")
+            },
+            success: function(data){
+                console.log('success!');
+            }
         });
         /*
         if(img.attr('src')=="/img/icons/fullheart.svg"){
