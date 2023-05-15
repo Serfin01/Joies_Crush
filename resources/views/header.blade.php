@@ -45,7 +45,7 @@
                 @else
                     <a href="{{ url('/login') }}"><img class="iconos" src="{{ asset('img/icons/user.svg') }}" alt="icono perfil"></a>
                 @endif
-                <img class="iconos" src="{{ asset('img/icons/heart.svg') }}" alt="icono favoritos">
+                <a href="{{ route('favourites.index') }}"><img class="iconos" src="{{ asset('img/icons/heart.svg') }}" alt="icono favoritos"></a>
                 <a class="cart-count" href="{{ url('/cart') }}">
                     <img class="iconos" src="{{ asset('img/icons/bag.svg') }}" alt="icono tienda">
                     @if($user && $user->cartItems()->count() > 0)

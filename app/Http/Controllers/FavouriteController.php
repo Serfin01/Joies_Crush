@@ -8,6 +8,18 @@ use App\Models\Product;
 
 class FavouriteController extends Controller
 {
+    protected static $noFilterTagName = "no";
+    /**
+     * Display a listing of the resource.
+     */
+    public function index(Request $request)
+    {
+        $products = Auth::user()->favourites()->get();
+        return view('navPages.favourites', compact(
+            'products'
+        ));
+    }
+
     public function addById(Request $request, string $product_id)
     {
         $product = Product::find($product_id);

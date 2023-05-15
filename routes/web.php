@@ -45,6 +45,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/checkout/pay', [PaymentController::class, 'show'])->name('checkout.pay');
     Route::post('/checkout/{id}', [PaymentController::class, 'checkout'])->name('checkout');
 
+    Route::get('/favourites', [FavouriteController::class, 'index'])->name('favourites.index');
     Route::post('/favourites/{product}', [FavouriteController::class, 'addById'])->name('favourites.addbyid');
 });
 Route::get('/register', [LoginController::class, 'showLoginForm'])->name('register');
