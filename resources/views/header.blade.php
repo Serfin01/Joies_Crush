@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,7 +45,7 @@
                 @else
                     <a href="{{ url('/login') }}"><img class="iconos" src="{{ asset('img/icons/user.svg') }}" alt="icono perfil"></a>
                 @endif
-                <img class="iconos" src="{{ asset('img/icons/heart.svg') }}" alt="icono favoritos">
+                <a href="{{ route('favourites.index') }}"><img class="iconos" src="{{ asset('img/icons/heart.svg') }}" alt="icono favoritos"></a>
                 <a class="cart-count" href="{{ url('/cart') }}">
                     <img class="iconos" src="{{ asset('img/icons/bag.svg') }}" alt="icono tienda">
                     @if($user && $user->cartItems()->count() > 0)
