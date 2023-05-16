@@ -706,6 +706,7 @@ svg {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 40px;
 }
 .aboutUs div img{
     width: 200px;
@@ -716,6 +717,12 @@ svg {
 }
 .ceos{
     display: flex;
+}
+.ceos h3{
+    color: var(--primary1);
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 60px;
 }
 /* dashboardAdmin */
 .userTable {
@@ -1071,4 +1078,79 @@ svg {
 
 .payContainer .btn-primary:hover {
     background-color: var(--primary1);
+}
+
+@media (max-width: 425px) {
+    .logoJoiesCrush {
+        width: 50px;
+    }
+    .search-container{
+        display: none !important;
+    }
+    /* .space {
+        height: 330px;
+    } */
+    .arrecades-container{
+        margin-left: 30px;
+    }
+    .bx-pager {
+        position: relative;
+        z-index: 90;
+        margin-top: -120px;
+        left: 33%;
+        width: 40%;
+    }
+    #carruselText1 {
+        bottom: 72px;
+        right: 24px;
+        width: 58%;
+    }
+    #carruselText2 {
+        top: 300px;
+        right: 100px;
+    }
+    #carruselText3 {
+        top: 12px;
+        right: 17px;
+        width: 60%;
+    }
+    #carruselText4 {
+        top: 16px;
+        left: 45px;
+        width: 27%;
+    }
+    .ceos{
+        flex-direction: column;
+    }
+    .footer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .colabTitle {
+        margin: 60px 4% 92px 4%;
+    }
+    .novTitle {
+        margin: 60px 20% 92px 20%;
+    }
+    .pendientesDibu{
+        display: none;
+    }
+    .genero{
+        flex-direction: column;
+    }
+    .itemC{
+        margin-bottom: 36px;
+    }
+    .regisForm{
+        flex-direction: column;
+    }
+    .regisForm div:first-child {
+        border-right: none; 
+    }
+    
+    .regisForm div:not(.check) {
+        width: auto;
+        padding: 0px 60px 0px 60px;
+        margin-top: 30px;
+    }
 }

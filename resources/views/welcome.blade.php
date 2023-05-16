@@ -42,7 +42,7 @@
                 <p>17,50€</p>
                 <div class="itemC">
                     <a href="#" class="btnCarrito">Afegir al carret</a>
-                    <a href="#"><img class="favs" src="{{ asset('img/icons/corazon.png') }}" alt="icono favoritos"></a>
+                    <a href="#"><img class="favs iconos" src="{{ asset('img/icons/heart.svg') }}" alt="icono favoritos"></a>
                 </div>
             </div>
             <div class="item">
@@ -50,7 +50,7 @@
                 <p>17,50€</p>
                 <div class="itemC">
                     <a href="#" class="btnCarrito">Afegir al carret</a>
-                    <a href="#"><img class="favs" src="{{ asset('img/icons/corazon.png') }}" alt="icono favoritos"></a>
+                    <a href="#"><img class="favs iconos" src="{{ asset('img/icons/heart.svg') }}" alt="icono favoritos"></a>
                 </div>
             </div>
             <div class="item">
@@ -58,7 +58,7 @@
                 <p>17,50€</p>
                 <div class="itemC">
                     <a href="#" class="btnCarrito">Afegir al carret</a>
-                    <a href="#"><img class="favs" src="{{ asset('img/icons/corazon.png') }}" alt="icono favoritos"></a>
+                    <a href="#"><img class="favs iconos" src="{{ asset('img/icons/heart.svg') }}" alt="icono favoritos"></a>
                 </div>
             </div>
             <div class="item">
@@ -66,7 +66,7 @@
                 <p>17,50€</p>
                 <div class="itemC">
                     <a href="#" class="btnCarrito">Afegir al carret</a>
-                    <a href="#"><img class="favs" src="{{ asset('img/icons/corazon.png') }}" alt="icono favoritos"></a>
+                    <a href="#"><img class="favs iconos" src="{{ asset('img/icons/heart.svg') }}" alt="icono favoritos"></a>
                 </div>
             </div>
         </div>
