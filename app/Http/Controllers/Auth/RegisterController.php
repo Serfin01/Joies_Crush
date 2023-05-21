@@ -65,12 +65,13 @@ class RegisterController extends Controller
      */
     protected function create(Request $request)
     {
+        //dd($request->all());
         $request->validate([
             'name' => 'required',
             'last_name' => 'required',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|confirmed|min:8',
-            'checkbox' => 'accepted',
+            'checkbox' => 'accepted|required',
         ], [
             'checkbox.accepted' => 'Debe aceptar la política de privacidad',
         ]);
@@ -82,7 +83,7 @@ class RegisterController extends Controller
             'email' => $request->input('email'),
             'password' => Hash::make($request->input('password')),
         ]);
-        return view('/');
+        return redirect()->route('dashboard');
     }
     protected function emailExists($email)
     {

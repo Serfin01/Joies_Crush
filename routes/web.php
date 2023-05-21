@@ -51,6 +51,10 @@ Route::middleware(['auth'])->group(function () {
 Route::get('/register', [LoginController::class, 'showLoginForm'])->name('register');
 Route::post('/register', [RegisterController::class, 'create']);
 
+Route::get('/login/google', [LoginController::class, 'redirectToGoogle'])->name('login.google');
+Route::get('/login/google/callback', [LoginController::class, 'handleGoogleCallback']);
+
+
 Route::get('/pendientes', [ProductController::class, 'index'])->name('products.index');
 Route::get('/pendientes/{product}', [ProductController::class, 'show'])->name('products.show');
 // Route::get('/galeria', function () {

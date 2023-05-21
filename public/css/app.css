@@ -461,6 +461,10 @@ svg {
     background-color: var(--fons1);
     color: var(--blanco);
 }
+.googlebtn a{
+    text-decoration: none;
+    color: var(--fons1);
+}
 .regisForm .fbkbtn{
     background-color: var(--facebook);
     color: var(--blanco);
