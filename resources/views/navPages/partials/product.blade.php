@@ -12,10 +12,18 @@
             <input class="arrecades-cantidad" type="number" name="quantity" value="1" min="1">
             @php($favd = (null !== Auth::user()) && ($product->usersFavourites()->where('user_id',Auth::user()->id)->first() !== null))
             <div id="favDiv">
-                <button type="submit">{{ __('Afegir al carret') }}</button>
-                <img class="iconos fav" src="{{ asset($favd ? 'img/icons/fullheart.svg' : 'img/icons/heart.svg') }}" alt="icono favoritos"
-                data-favd="{{ $favd ? "true" : "false" }}"
-                data-product_id="{{ $product->id }}">
+                <button type="submit" class="btnAñadirCarrito">{{ __('Afegir al carret') }}</button>
+                @guest
+                    <a href="{{ route('login') }}">
+                        <img class="iconos fav" src="{{ asset($favd ? 'img/icons/fullheart.svg' : 'img/icons/heart.svg') }}" alt="icono favoritos"
+                            data-favd="{{ $favd ? 'true' : 'false' }}"
+                            data-product_id="{{ $product->id }}">
+                    </a>
+                @else
+                    <img class="iconos fav" src="{{ asset($favd ? 'img/icons/fullheart.svg' : 'img/icons/heart.svg') }}" alt="icono favoritos"
+                        data-favd="{{ $favd ? 'true' : 'false' }}"
+                        data-product_id="{{ $product->id }}">
+                @endguest
             </div>
         </form>
     </div>

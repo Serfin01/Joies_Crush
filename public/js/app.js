@@ -112,4 +112,13 @@ $(document).ready(function(){
             }, 100);
         });
     })
+    $('.btnAñadirCarrito').on('click', function(){
+        Swal.fire({
+            icon: 'success',
+            title: 'Producte afegit al carret',
+            text: 'El producte ha estat afegit al carret de compra amb èxit.',
+            showConfirmButton: false,
+            timer: 3000
+        });
+    });
 });

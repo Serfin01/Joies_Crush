@@ -2,9 +2,9 @@
     <div class="heroSection">
         <div class="bxslider">
             <div><div class="slideText" id="carruselText1"><h4>AMOR ÚNIC</h4><p>Dissenyem les teves arracades artesanalment i amb molta cura. Cada disseny és únic, així com cada Crush que t’agrada.</p></div><img id="slide1" src="{{ asset('img/carrusel/carrusel1.JPG') }}" alt="pendiente morado"></div>
-            <div><div class="slideText" id="carruselText2"><h4>COLOR <i>CRUSH</i></h4><p>Busca el color de la teva personalitat.<br>La que et faci única i et defineixi.</p></div><img id="slide2" src="{{ asset('img/carrusel/carrusel2.png') }}" alt="pendiente morado"></div>
+            <div><div class="slideText" id="carruselText2"><h4>COLOR CRUSH</h4><p>Busca el color de la teva personalitat.<br>La que et faci única i et defineixi.</p></div><img id="slide2" src="{{ asset('img/carrusel/carrusel2.png') }}" alt="pendiente morado"></div>
             <div><div class="slideText" id="carruselText3"><h4>AMB CURA I AMOR</h4><p>Dissenyem les teves arrecades artesanament i amb molta cura.<br>Perquè et mereixes bellesa, et mereixes una bona Crush</p></div><img id="slide3" src="{{ asset('img/carrusel/carrusel3.jpg') }}" alt="mujer con pendiente"></div>
-            <div><div class="slideText" id="carruselText4"><h4><i>PERFECT DATE</i></h4><p>Perfecta per qualsevol ocasió. Tant per moments casuals i ocasions especials i elegants.</p></div><img id="slide4" src="{{ asset('img/carrusel/carrusel4.jpg') }}" alt="pendiente morado"></div>
+            <div><div class="slideText" id="carruselText4"><h4>PERFECT DATE</h4><p>Perfecta per qualsevol ocasió. Tant per moments casuals i ocasions especials i elegants.</p></div><img id="slide4" src="{{ asset('img/carrusel/carrusel4.jpg') }}" alt="pendiente morado"></div>
             <div><div class="slideText" id="carruselText5"><h4>AMOR MODELABLE</h4><p>Disposem de totes les formes que vulguis i fins i tot amb la possibilitat de què siguin personalitzades.</p></div><img id="slide5" src="{{ asset('img/carrusel/carrusel5.JPG') }}" alt="pendiente rojo"></div>
         </div>
         <div class="bx-pager">
@@ -36,7 +36,14 @@
         <div class="novTitle">
             <h2>NOVETATS</h2>
         </div>
-        <div class="genero">
+        <div class="arrecades-container">
+            @foreach($products as $product)
+                @include('navPages.partials.product')
+            @endforeach
+        </div>
+
+
+        {{-- <div class="genero">
             <div class="item">
                 <img class="itemImage" src="{{ asset('img/novedades/n1.jpg') }}" alt="pendiente azul">
                 <p>17,50€</p>
@@ -69,7 +76,7 @@
                     <a href="#"><img class="favs iconos" src="{{ asset('img/icons/heart.svg') }}" alt="icono favoritos"></a>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </div>
     <div class="colaboradores">
         <div class="colabTitle">

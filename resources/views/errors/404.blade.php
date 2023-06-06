@@ -16,7 +16,7 @@
         </div>
         <h3>- ERROR 404 -</h3>
         <p>Ho sento. Sembla que la pàgina que estàs<br> buscant no existeix...</p>
-        <a href="">Torna a l’inici</a>
+        <a href="/">Torna a l’inici</a>
     </div>
 </body>
 </html>

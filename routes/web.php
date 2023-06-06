@@ -10,6 +10,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\FavouriteController;
 use App\Http\Controllers\ContactMailController;
 use App\Http\Controllers\PaymentController;
+use App\Models\Product;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +24,9 @@ use App\Http\Controllers\PaymentController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    // return view('welcome');
+    $products = Product::take(4)->get();
+    return view('welcome')->with('products', $products);
 });
 
 //Route::get('/login', [LoginController::class, 'show']);

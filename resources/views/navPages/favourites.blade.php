@@ -1,35 +1,25 @@
 @include('header')
-    {{-- <h1>Todos los productos</h1>
-
-    <table>
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Precio</th>
-                <th>Stock</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach($products as $product)
-                <tr>
-                    <td>{{ $product->name }}</td>
-                    <td>{{ $product->price }}</td>
-                    <td>{{ $product->stock }}</td>
-                    <td>
-                        <a href="{{ route('products.show', $product->id) }}">Ver</a>
-                        <form action="{{ route('cart.add', $product->id) }}" method="POST">
-                            @csrf
-                            <button type="submit">Agregar al carrito</button>
-                        </form>
-                    </td>
-                </tr>
-            @endforeach
-        </tbody>
-    </table> --}}
+    @if($products->isEmpty())
+        <script>
+            Swal.fire({
+                icon: 'info',
+                title: 'No hi ha productes agregats a favorits',
+                showConfirmButton: false,
+                html: `
+                    <p>No hi ha productes agregats a favorits.</p>
+                    <button onclick="goBack()" class="swal2-confirm swal2-styled" style="margin-top: 10px; width: 120px;">Tornar enrere</button>
+                `
+            });
+    
+            function goBack() {
+                window.history.back();
+            }
+        </script>
+    @else
     <div class="arrecades-container">
         @foreach($products as $product)
             @include('navPages.partials.product')
         @endforeach
     </div>
+    @endif
 @include('footer')
