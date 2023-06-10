@@ -70,9 +70,18 @@ $(document).ready(function(){
     });
 
     $('#btnPay').on("click", function(e){
-        // e.preventDefault();
-        console.log("aa")
-        Swal.fire('Gràcies per la teva compra!', '', 'success');
+        e.preventDefault();
+        let name = $('#name').val();
+        let email = $('#email').val();
+        let address = $('#address').val();
+        let num = $('#num').val();
+        let date = $('#date').val();
+        let cv = $('#cv').val();
+        if(name === '' || email === '' || address === '' || num === '' || date === '' || cv === ''){
+            Swal.fire('Por favor completa todos los campos', '', 'error');
+        }else{
+            Swal.fire('Gràcies per la teva compra!', '', 'success');
+        }
     })
 
     $('.fav').on('click', function(){

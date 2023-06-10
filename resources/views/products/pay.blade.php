@@ -1,9 +1,8 @@
 @include('header')
 <div class="payContainer">
-    <h2>Pago</h1>
+    <h2>Pago</h2>
     <form action="{{route('checkout',$user->id)}}" method="POST">
         @csrf
-
         <div class="form-group">
             <label for="name">Nom complet</label>
             <input type="text" id="name" name="name" class="form-control" required>
