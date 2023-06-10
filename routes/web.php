@@ -28,7 +28,6 @@ Route::get('/', function () {
     $products = Product::take(4)->get();
     return view('welcome')->with('products', $products);
 });
-
 //Route::get('/login', [LoginController::class, 'show']);
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
@@ -74,6 +73,24 @@ Route::get('/aboutUs', function () {
 });
 Route::get('/contact', function () {
     return view('navPages.contact');
+});
+Route::get('/condiciones', function () {
+    return view('legal.condiciones');
+});
+Route::get('/privacidad', function () {
+    return view('legal.privacidad');
+});
+Route::get('/cookies', function () {
+    return view('legal.cookies');
+});
+Route::get('/devoluciones', function () {
+    return view('ayuda.devoluciones');
+});
+Route::get('/metodos-pago', function () {
+    return view('ayuda.metodosPago');
+});
+Route::get('/terminos-servicio', function () {
+    return view('ayuda.terminosServicio');
 });
 
 Route::post('/contact', [ContactMailController::class, 'store'])->name('contact.store');
