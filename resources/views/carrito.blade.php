@@ -3,12 +3,12 @@
     <table class="cartTable">
         <thead>
             <tr>
-                <th>Imagen</th>
-                <th>Nombre</th>
-                <th>Precio Unitario</th>
-                <th>Cantidad</th>
-                <th>Precio Total</th>
-                <th>Acciones</th>
+                <th>Imatge</th>
+                <th>Nom del Crush</th>
+                <th>Preu unitari</th>
+                <th>Quantitat</th>
+                <th>Preu total</th>
+                <th>Accions</th>
             </tr>
         </thead>
         <tbody>
