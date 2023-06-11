@@ -1,23 +1,22 @@
 <div class="footer">
     <div>
         <h4>SOBRE JOIES CRUSH</h4>
-        <p>Coleccions</p>
-        <p>Catàleg d’arrecades</p>
-        <p>Galería d’estils</p>
-        <p>Sobre nosaltres</p>
-        <p>Contacte</p>
+        <a href="/pendientes">Catàleg d’arrecades</a><br>
+        <a href="/galeria">Galería d’estils</a><br>
+        <a href="/aboutUs">Sobre nosaltres</a><br>
+        <a href="/contact">Contacte</a>
     </div>
     <div>
         <h4>LEGAL</h4>
-        <p>Condicions generals</p>
-        <p>Pol·lítica de privacitat</p>
-        <p>Pol·lítica de cookies</p>
+        <a href="/condiciones">Condicions generals</a><br>
+        <a href="/privacidad">Política de privadesa</a><br>
+        <a href="/cookies">Política de cookies</a>
     </div>
     <div>
         <h4>AJUDA</h4>
-        <p>Métodes de pagament</p>
-        <p>Termes de servei</p>
-        <p>Devolucions</p>
+        <a href="metodos-pago">Métodes de pagament</a><br>
+        <a href="terminos-servicio">Termes de servei</a><br>
+        <a href="devoluciones">Devolucions</a>
     </div>
     <div>
         <div class="contactos">
@@ -26,14 +25,10 @@
             <p>C/ la vida es dura 12</p>
         </div>
         <div>
-            <i class="fa fa-instagram redes"></i>
-            <i class="fa fa-youtube-play redes"></i>
-            <i class="fa fa-whatsapp redes"></i>
-            <i class="fa fa-google redes"></i>
-            {{-- <img src="" alt="instagram">
-            <img src="" alt="youtube">
-            <img src="" alt="whatsapp">
-            <img src="" alt="gmail"> --}}
+            <a href="https://www.instagram.com/joies_crush/" target="_blank"><i class="fa fa-instagram redes"></i></a>
+            <a href="#"><i class="fa fa-youtube-play redes"></i></a>
+            <a href="#"><i class="fa fa-whatsapp redes"></i></a>
+            <a href="#"><i class="fa fa-google redes"></i></a>
         </div>
     </div>
 </div>
