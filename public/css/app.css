@@ -706,12 +706,18 @@ svg {
     line-height: 60px;
     letter-spacing: 0.05em;
 }
+.ceos {
+    display: flex;
+    justify-content: space-around;
+}
 .ceos div{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 30%;
     padding: 40px;
 }
+
 .aboutUs div img{
     width: 200px;
     height: 200px;

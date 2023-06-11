@@ -3,10 +3,10 @@
         <script>
             Swal.fire({
                 icon: 'info',
-                title: 'No hi ha productes agregats a favorits',
+                title: 'No hi ha productes favorits',
                 showConfirmButton: false,
                 html: `
-                    <p>No hi ha productes agregats a favorits.</p>
+                    <p>Visita el catàleg d'arrecades per veure contingut</p>
                     <button onclick="goBack()" class="swal2-confirm swal2-styled" style="margin-top: 10px; width: 120px;">Tornar enrere</button>
                 `
             });
