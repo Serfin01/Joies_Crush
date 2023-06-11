@@ -50,7 +50,7 @@
                 <td>{{ $subtotal }}€</td>
             </tr>
             <tr>
-                <td>Gastos de envío</td>
+                <td>Despeses d'enviament</td>
                 <td>{{ $shipping }}€</td>
             </tr>
             <tr>
