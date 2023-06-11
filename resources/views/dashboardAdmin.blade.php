@@ -2,7 +2,7 @@
 <h2>Bienvenido, Joies crush Manager</h2>
 <form action="{{ route('logout') }}" method="POST">
     @csrf
-    <button type="submit">Cerrar sesión</button>
+    <button type="submit">Tanca sessió</button>
 </form>
 <table class="userTable">
     <thead>
