@@ -125,7 +125,7 @@ $(document).ready(function(){
         Swal.fire({
             icon: 'success',
             title: 'Producte afegit al carret',
-            text: 'El producte ha estat afegit al carret de compra amb èxit.',
+            text: "El producte s'ha afegit al carret de compra amb èxit.",
             showConfirmButton: false,
             timer: 3000
         });
