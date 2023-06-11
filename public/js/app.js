@@ -78,7 +78,7 @@ $(document).ready(function(){
         let date = $('#date').val();
         let cv = $('#cv').val();
         if(name === '' || email === '' || address === '' || num === '' || date === '' || cv === ''){
-            Swal.fire('Por favor completa todos los campos', '', 'error');
+            Swal.fire('Es necessari completar tots els camps', '', 'error');
         }else{
             Swal.fire('Gràcies per la teva compra!', '', 'success');
         }
